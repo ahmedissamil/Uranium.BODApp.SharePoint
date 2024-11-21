@@ -1,0 +1,478 @@
+﻿/* @media print {
+.footer {page-break-after: always;}
+} */
+
+@page {
+    size: A4;
+    margin-top: 4cm;
+    margin-bottom: 4cm;
+    page-break-after: always;
+}
+
+@page :first {
+    margin: 2cm;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.pdf {
+    /* background-color: rgba(250, 250, 250, 0.856);  */
+    font-family: "Sakkal Majalla Regular";
+}
+
+.pdfStyle {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    position: relative;
+}
+
+.header {
+    background-color: blue;
+    margin-top: 4rem;
+    height: 100px;
+}
+
+.bdyImg {
+    width: 90px;
+    background-color: transparent !important;
+    height: 100px;
+    display: inline;
+    position: relative;
+    padding-top: 5cm !important;
+    margin-top: 150cm !important;
+}
+
+.pdf .pdfContent {
+    width: 86%;
+    padding-top: 5rem;
+    margin-right: 5rem;
+    page-break-inside: avoid;
+}
+
+    .pdf .pdfContent .headingContent {
+        border-bottom: 1px solid;
+        border-top: 1px solid;
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+
+        .pdf .pdfContent .headingContent h3 {
+            font-size: 1.2rem;
+        }
+
+        .pdf .pdfContent .headingContent h5 {
+            color: #0075c8;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+img.bgPdf {
+    position: absolute;
+    width: 80px;
+    right: 1rem;
+    top: 1rem;
+    padding-left: 10px;
+}
+
+.pdf .pdfContent table {
+    margin-top: 1rem;
+    border-bottom: 1px solid #000;
+    width: 100% !important;
+    border: 1px solid #000 !important;
+}
+
+.pdf .pdfContent .table td {
+    text-align: center;
+    page-break-inside: avoid;
+}
+
+.pdf .pdfContent .table td,
+.pdf .pdfContent .table th {
+    border-top: 1px solid #000;
+}
+
+.pdf .pdfContent table th {
+    background-color: #f1f1f1;
+    font-size: 0.8rem;
+}
+
+.pdf .pdfContent .item {
+    margin-top: 4rem;
+}
+
+.pdf .pdfContent .headingItem {
+    color: #0075c8;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.pdf .pdfContent .headingComment,
+.pdf .pdfContent .headingRecommand {
+    color: #000;
+    font-weight: 900;
+}
+
+.pdf .pdfContent .commentBlock ul li,
+.pdf .pdfContent .commentBlock ol li,
+.pdf .pdfContent .recommandBlock ul li,
+.pdf .pdfContent .recommandBlock ol li {
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAANCAYAAACUwi84AAAACXBIWXMAAAsTAAALEwEAmpwYAAAGs2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTExLTExVDA5OjA5OjUyKzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMC0xMi0wN1QxMDozNSswMjowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMC0xMi0wN1QxMDozNSswMjowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpmNjcxYWE1Mi0xOTUzLWI4NDktYmRmNy1hYjljMDU2YzJmMDYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ZWYwYWRlZWMtYTIxYy02ZTQ3LTljMGQtM2NhNjgyZGM5ZDM3IiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6ZWYwYWRlZWMtYTIxYy02ZTQ3LTljMGQtM2NhNjgyZGM5ZDM3Ij4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDplZjBhZGVlYy1hMjFjLTZlNDctOWMwZC0zY2E2ODJkYzlkMzciIHN0RXZ0OndoZW49IjIwMTktMTEtMTFUMDk6MDk6NTIrMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6M2YyZjk5NGItMzM0MC0wYjQ1LWFhMzktNjZmY2MwODEzNDNjIiBzdEV2dDp3aGVuPSIyMDE5LTExLTExVDA5OjEyOjMxKzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmY2NzFhYTUyLTE5NTMtYjg0OS1iZGY3LWFiOWMwNTZjMmYwNiIgc3RFdnQ6d2hlbj0iMjAyMC0xMi0wN1QxMDozNSswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ph5wQpYAAAFHSURBVBiVXZBJKMRhAMV/379vxjA0S5oQBgdqsqQsByVJlqQchANuSo5uDlzkYslZObnIlrI0JRxwkTKUi8iSDGPE3zpN/c3nNNOM3/W91+s9oZQintdXXW34/NypVLrLXch40TB+1eTiHvN+Mx5LmN7i+kTDwuYhy/eQbtMYbykhP8MhtKh4cORT08ePYJaMVLqoKi0UABrA1c29mtk+I2BOYtBjoaO+QkSDMvAcVBMrhxzLTLqyYKizUcTXylXvLnshQZBftG+D/2i52ZlI4xvj8425kydml7wJu7Wm2hoGimw4Ph/4iliZ2tfZOfDFTJrJJEVfawPt2SnYTCF0aWXMe8n5xbWKrXDa7WK4p41yVwRpTeZC5jK+dYr/RVexHwry3GK0uYwccctPSph13c1pUCQ+WVdTLfo/wmrtPQ0j7MSZmswfmM1wt6OFInwAAAAASUVORK5CYII=);
+}
+
+.pdf .pdfContent .recommandBlock {
+    border: 1px solid #000;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+.footer {
+    border-top: 1px solid rgb(71, 70, 70);
+    padding-top: 0.5rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding: 0.2rem 0;
+    width: 84%;
+    margin: auto;
+    /* bottom: 1rem; */
+}
+
+    .footer p {
+        font-size: 0.7rem;
+        color: #8e8d8d;
+    }
+
+        .footer p span {
+            margin-right: 6rem;
+        }
+
+    .footer p {
+        position: absolute;
+        left: 0;
+        top: 0.5rem;
+    }
+
+/************************************* Mohamed Ammar Style Start *********************************/
+.blueHeading {
+    font-size: 21px;
+}
+
+#itemtitle {
+    color: rgb(30, 106, 184);
+    font-size: 18px;
+    padding: 0 8px;
+    width: 80%;
+/*    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-all;*/
+    display: block;
+}
+
+.itemnumber {
+    margin-bottom: 5px;
+}
+
+.itemsBlock {
+    margin-bottom: 8px;
+}
+
+.BorderMe {
+    border: 1px solid #000 !important;
+}
+
+.WhiteBox {
+    border-radius: 10px;
+    font-family: "Sakkal Majalla Regular";
+    padding-top: 5px;
+    padding-left: 3rem;
+}
+
+.PDFBox {
+    position: relative;
+}
+
+.HeaderBox {
+    position: relative;
+}
+
+.itemsMeetingBlock {
+    margin-top: 4px;
+}
+
+.reportImg {
+    padding-left: 5rem;
+}
+
+.ImagesBox #content {
+    position: relative;
+    direction: ltr;
+    text-align: left;
+}
+
+.ImagesBox .arrowBack {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.7;
+    direction: rtl;
+    text-align: right;
+    width: 123px;
+}
+
+.arrowBackImg {
+    width: 30%;
+    direction: rtl;
+    /* z-index: -1;  */
+    /* display: none; */
+    text-align: right;
+    background-color: transparent !important;
+    height: 400px;
+}
+
+.WhiteBox .beforeMeeting {
+    padding: 0 0 1rem;
+    border-bottom: 2px solid #104e75;
+    border-radius: 10px;
+}
+
+.ContentBox {
+    padding: 0 100px 15px 0px;
+    position: relative;
+}
+
+    .ContentBox .reportTitlesBox {
+        margin-top: 0px;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+        .ContentBox .reportTitlesBox .firstTitle {
+            font-weight: bold;
+            color: #5e5e5e;
+        }
+
+        .ContentBox .reportTitlesBox .BlueTitle {
+            color: #1e6ab8;
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+.Introtable {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    /* border: 1px solid #f5f5f5; */
+}
+
+    .Introtable tr {
+        height: 40px;
+        font-size: 20px;
+        font-family: "SakkalBold";
+        border: 1px solid #dbdbdb;
+    }
+
+    .Introtable td {
+        text-align: center;
+    }
+
+    .Introtable th,
+    .Introtable td {
+        width: 25%;
+    }
+
+    .Introtable th {
+        background-color: #f5f5f5;
+        padding: 10px 5px;
+    }
+
+.Notice {
+    margin-bottom: 40px;
+}
+
+    .Notice h5 {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 25px !important;
+    }
+
+    .Notice p {
+        text-align: center;
+        font-size: 20px !important;
+    }
+
+    .Notice ol {
+        padding-inline-start: 30px;
+    }
+
+        .Notice ol li {
+            list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAANCAYAAACUwi84AAAACXBIWXMAAAsTAAALEwEAmpwYAAAGs2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTExLTExVDA5OjA5OjUyKzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMC0xMi0wN1QxMDozNSswMjowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMC0xMi0wN1QxMDozNSswMjowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpmNjcxYWE1Mi0xOTUzLWI4NDktYmRmNy1hYjljMDU2YzJmMDYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ZWYwYWRlZWMtYTIxYy02ZTQ3LTljMGQtM2NhNjgyZGM5ZDM3IiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6ZWYwYWRlZWMtYTIxYy02ZTQ3LTljMGQtM2NhNjgyZGM5ZDM3Ij4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDplZjBhZGVlYy1hMjFjLTZlNDctOWMwZC0zY2E2ODJkYzlkMzciIHN0RXZ0OndoZW49IjIwMTktMTEtMTFUMDk6MDk6NTIrMDI6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6M2YyZjk5NGItMzM0MC0wYjQ1LWFhMzktNjZmY2MwODEzNDNjIiBzdEV2dDp3aGVuPSIyMDE5LTExLTExVDA5OjEyOjMxKzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmY2NzFhYTUyLTE5NTMtYjg0OS1iZGY3LWFiOWMwNTZjMmYwNiIgc3RFdnQ6d2hlbj0iMjAyMC0xMi0wN1QxMDozNSswMjowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDwvcmRmOlNlcT4gPC94bXBNTTpIaXN0b3J5PiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ph5wQpYAAAFHSURBVBiVXZBJKMRhAMV/379vxjA0S5oQBgdqsqQsByVJlqQchANuSo5uDlzkYslZObnIlrI0JRxwkTKUi8iSDGPE3zpN/c3nNNOM3/W91+s9oZQintdXXW34/NypVLrLXch40TB+1eTiHvN+Mx5LmN7i+kTDwuYhy/eQbtMYbykhP8MhtKh4cORT08ePYJaMVLqoKi0UABrA1c29mtk+I2BOYtBjoaO+QkSDMvAcVBMrhxzLTLqyYKizUcTXylXvLnshQZBftG+D/2i52ZlI4xvj8425kydml7wJu7Wm2hoGimw4Ph/4iliZ2tfZOfDFTJrJJEVfawPt2SnYTCF0aWXMe8n5xbWKrXDa7WK4p41yVwRpTeZC5jK+dYr/RVexHwry3GK0uYwccctPSph13c1pUCQ+WVdTLfo/wmrtPQ0j7MSZmswfmM1wt6OFInwAAAAASUVORK5CYII=);
+            margin: 8px 0;
+            font-size: 20px;
+            font-family: "SakkalBold";
+            line-height: 2;
+        }
+
+.ContentBox .itemsCreated {
+    padding-top: 0;
+}
+
+.ContentBox .headingItem h5 {
+    margin: 0 !important;
+    width: 60%;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(30, 106, 184);
+}
+
+.ContentBox .itemBlock {
+    margin: 40px 0;
+    position: relative;
+}
+
+    .ContentBox .itemBlock img {
+        max-width: 100% !important;
+    }
+
+.statusText {
+    color: rgb(30, 106, 184) !important;
+}
+
+.StatusBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+    .StatusBox i,
+    .StatusBox p {
+        display: inline-block;
+        width: fit-content;
+    }
+
+.ContentBox .headingItem {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    font-size: 20px;
+    margin: 0;
+}
+
+    .ContentBox .headingItem label {
+        font-weight: bold;
+        font-size: 20px;
+        margin-inline-end: 3px;
+        width: fit-contnet;
+        color: rgb(30, 106, 184);
+        display: inline-flex !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+
+.DoneOrNot,
+.ActionTake {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.DoneOrNot {
+    color: #104e75;
+    margin-bottom: 5px;
+}
+
+.ActionTake {
+    color: #777;
+}
+
+    .DoneOrNot i,
+    .ActionTake i {
+        font-size: 20px;
+        margin-inline-end: 7px;
+    }
+
+    .DoneOrNot p,
+    .ActionTake p {
+        margin-bottom: 0;
+        font-size: 16px;
+        font-size: 16px;
+        font-family: "SakkalBold";
+    }
+
+.ContentBox .basicData label {
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+
+.ContentBox .basicData .form-group {
+    margin-bottom: 8px;
+}
+
+.ContentBox .editableBlock {
+    padding: 15px !important;
+    border: 1px solid #8a8a8a !important;
+}
+
+    .ContentBox .editableBlock ol {
+        padding-inline-start: 35px;
+    }
+
+.ContentBox .itemMeeting .editableBlock ul li,
+.ContentBox .itemMeeting .editableBlock ol li {
+    font-size: 17px;
+    font-weight: normal;
+    font-family: "SakkalRegular" !important;
+    list-style-image: url("/Style Library/EkuityDesign/Images/Icons/bullet.png") !important;
+}
+
+.ContentBox .editableBlock p {
+    font-family: "SakkalBold";
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.Infotable {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    table-layout: fixed;
+}
+
+    .Infotable tr {
+        height: 40px;
+        font-size: 18px;
+        font-family: "SakkalBold";
+    }
+
+    .Infotable th {
+        background-color: #104e75;
+        color: #fff;
+        width: calc(100% / 3);
+    }
+
+.ContentBox .itemBlock .editableBlock > div {
+    margin: 0.5rem 0;
+    padding: 10px !important;
+    border-color: #c8c8c8 !important;
+}
+
+.ContentBox .itemBlock table {
+    width: 100% !important;
+    border: 1px solid !important;
+}

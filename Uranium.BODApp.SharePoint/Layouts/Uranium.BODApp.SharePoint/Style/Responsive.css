@@ -1,0 +1,717 @@
+﻿@media screen and (max-width: 1750px) {
+    .navigation-container {
+        padding: .8rem 5%;
+    }
+    .ContentPlaceHolder {
+        margin: 2vh auto 0;
+        width: 95% !important;
+    }
+    #blocks-container .block .block-header {
+        /* height: 3.8rem; */
+    }
+    #breadCrumbs-container h1.title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    #events-list li .event-details .event-image {
+        width: 80px;
+        height: 75px;
+        overflow: hidden;
+    }
+    .container-fluid #Site-BG {
+        height: 20vw;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    #analyset .listPoints::after {
+        width: 26%;
+        height: 45%;
+    }
+    #analyset #companyLogo {
+        width: 200px;
+        height: 200px;
+        padding: 1rem;
+    }
+    #analyset .row>div:last-child .analysetBox, #analyset .row>div:nth-child(3) .analysetBox {
+        margin-top: 4rem;
+    }
+    .blueBox ul, .greenBox ul {
+        padding-left: 45px;
+    }
+    .redBox ul, .orangeBox ul {
+        padding-right: 70px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    div#chart-legends {
+        /* left:-30%; */
+    }
+    #analyset #companyLogo {
+        width: 165px;
+        height: 165px;
+        padding: 5px;
+    }
+    .analysetBox {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 1500px) {
+    .InvestmentSectors>div .Content>a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .ShareholdersChart {
+        width: 18vw;
+        height: 18vw;
+    }
+}
+
+@media screen and (max-width: 1370px) {
+    #navbarNav>div>ul>li>ul>li>a, #navbarNav>div>ul>li>a {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+    #lang-container #myAccount {
+        font-size: 18px;
+    }
+    #lang-container #myAccount .fas {
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    #lang-container #seperator {
+        margin: 0 5px;
+    }
+    #lang-container #lang {
+        width: 28px;
+        height: 26px;
+        font-size: 16px;
+    }
+    #navbarNav>div>ul>li>ul ul li a {
+        font-size: 13px;
+    }
+    #breadCrumbs-container h1.title {
+        font-size: 18px;
+        margin-bottom: 1rem;
+    }
+    #breadCrumbs-container .breadCrumbs img.icon {
+        width: 12px;
+        margin-left: 8px;
+        top: -2px;
+    }
+    .block-content {
+        padding: 12px 20px;
+        overflow: hidden;
+    }
+    .edit-icon a {
+        font-size: 13px;
+    }
+    #events-list li .event-details .event-image {
+        width: 67px;
+        height: 65px;
+    }
+    #events-list li .event-details h1 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    a.details-link {
+        font-size: 11px;
+    }
+    a.details-link .fas {
+        margin-right: 5px;
+        font-size: 10px;
+    }
+    #events-list .icon-container {
+        font-size: 11px;
+    }
+    #events-list .icon-container .fas {
+        font-size: 11px;
+    }
+    #all-event-link {
+        padding: 10px 5px;
+    }
+    #all-event-link a {
+        font-size: 12px;
+    }
+    #all-event-link .fas {
+        font-size: 11px;
+    }
+    ul#useful-links li {
+        padding: 15px 5px;
+    }
+    ul#useful-links li a {
+        font-size: 17px;
+    }
+    footer .far {
+        font-size: 11px !important;
+        padding: 3px;
+    }
+    .document-details a {
+        font-size: 13px;
+    }
+    #breadCrumbs-container .breadCrumbs, #breadCrumbs-container .breadCrumbs>span, .breadCrumbs a {
+        font-size: 11px;
+    }
+    .side-menu>div>ul>li span, .side-menu>div>ul>li span a, .side-menu>div>ul>li a {
+        font-size: 12px;
+    }
+    .side-menu>div>ul>li .icon {
+        display: flex;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 8px;
+    }
+    .side-menu>div>ul>li {
+        padding: 15px 10px;
+    }
+    .side-menu>div>ul>li>.fas {
+        top: 25px;
+        font-size: 10px !important;
+    }
+    .container-fluid #Site-BG {
+        height: 22vw;
+    }
+}
+
+@media screen and (max-width: 1185px) {
+    .Shareholders h4 {
+        /* font-size: 1.3rem; */
+        /* padding-right: 4.5vw; */
+    }
+    .row.Capital>div {
+        padding: 0 1%;
+    }
+    div#chart-legends {
+        /* left: -40%; */
+    }
+    .ContentPlaceHolder {
+        margin: 2vh auto 0;
+        width: 94% !important;
+    }
+    .navigation-container {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        padding: 0;
+    }
+    #lang-container {
+        justify-content: flex-end;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+        padding: 12px 2%;
+    }
+    nav.navbar {
+        padding: 5px 2rem;
+        width: 100%;
+    }
+    #events-list li {
+        height: auto;
+    }
+    #events-list li .event-details .event-image {
+        display: none;
+    }
+    .event-details-link {
+        width: 100%;
+        align-items: flex-start !important;
+        margin: 5px 0;
+    }
+    #events-list li .event-details .event-data {
+        width: 100%;
+        margin: 0;
+    }
+    #events-list li .event-details {
+        width: 70%;
+    }
+    .container-fluid #Site-BG {
+        height: 27vw;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #navbarNav>div>ul>li>ul ul li:hover .fas {
+        color: #0075c8;
+    }
+    #navbarNav>div>ul>li>ul ul li:hover>ul {
+        display: block;
+    }
+    #navbarNav>div>ul>li>ul ul li:hover>a, #navbarNav>div>ul>li>ul ul li>a.selected {
+        border-right: 5px solid #0075c8;
+        text-decoration: none;
+        color: #0075c8 !important;
+    }
+    #navbarNav>div>ul>li>ul>li:hover>ul {
+        display: block;
+    }
+    #navbarNav>div>ul>li>ul>li>a.dynamic-children {
+        padding: 7px 8px 7px 25px;
+    }
+    #navbarNav>div>ul>li>ul>li>a, #navbarNav>div>ul>li>a, #navbarNav>div>ul>li>ul ul li a {
+        font-size: 12px;
+    }
+    #navbarNav>div>ul>li>ul>li>a.dynamic-children::after {
+        content: "\f107";
+        font-family: "Font Awesome 5 Free" !important;
+        font-weight: 900;
+        position: absolute;
+        left: 10px;
+    }
+    #navbarNav>div>ul {
+        display: block !important;
+    }
+    #sidemenu-container {
+        position: sticky;
+        top: 100px;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .ShareholdersChart {
+        width: 20vw;
+        height: 20vw;
+    }
+    .edit-icon.sideMenu {
+        position: absolute !important;
+        top: .5rem !important;
+        left: 1rem !important;
+        right: auto !important;
+    }
+    .edit-icon.changeBG {
+        position: absolute !important;
+        top: 0 !important;
+        left: 1% !important;
+        right: auto !important;
+    }
+    .NoLeftPadding, .NoPadding {
+        padding: 0;
+    }
+    .ContentPlaceHolder {
+        margin: 2vh auto 0;
+        width: 96% !important;
+    }
+    #breadCrumbs-container h1.title {
+        font-size: 18px;
+        margin-bottom: .5rem;
+    }
+    .sector-content-container {
+        padding: 1rem 1.2rem;
+    }
+    .container-fluid #Site-BG {
+        display: none;
+    }
+    #lang-container {
+        background: #004A87;
+    }
+    #navbarNav {
+        width: 100%;
+        line-height: 0;
+    }
+    #navbarNav>div {
+        width: 100%;
+    }
+    #navbarNav>div>ul {
+        overflow: hidden;
+        display: none;
+        padding: 0;
+        margin: 0;
+        background: #fff;
+        width: 100%;
+        z-index: 11;
+        box-shadow: 0px 5px 4px rgba(0, 0, 0, .3);
+    }
+    #navbarNav>div>ul>li>ul>li, #navbarNav>div>ul>li>a {
+        width: 100%;
+        overflow: hidden;
+        margin: 0 !important;
+    }
+    #navbarNav>div>ul>li>ul>li>a, #navbarNav>div>ul>li>a {
+        color: #ffffff !important;
+        width: 100%;
+        padding: 22px 3% !important;
+        margin: 0 !important;
+        font-size: 12px;
+        background: #004a87 !important;
+        border-top: 1px solid rgba(255, 255, 255, .4);
+    }
+    #navbarNav>div>ul>li, #navbarNav>div>ul>li>ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav.navbar {
+        padding: 0;
+        background: #004A87;
+    }
+    #burger, .navbar-light .navbar-brand {
+        display: block;
+    }
+    .navbar-light .navbar-brand {
+        margin: 0 1rem;
+    }
+    #blocks-container>div {
+        width: 100%;
+        flex: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+    #blocks-container>.row>div {
+        padding: 0;
+    }
+    #blocks-container>div#sidemenu-container {
+        padding: 0;
+    }
+    #navbarNav>div>ul>li.selected>a, #navbarNav>div>ul>li>ul>li.selected>a, #navbarNav>div>ul>li>ul>li>a.arrowDown {
+        text-decoration: none;
+        font-weight: normal !important;
+        background: #01325a !important;
+        color: #fff !important;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    #navbarNav>div>ul>li>ul>li>a.dynamic-children::after {
+        content: "\f104";
+        font-family: "Font Awesome 5 Free" !important;
+        font-weight: 900;
+        position: absolute;
+        left: 3% !important;
+    }
+    #navbarNav>div>ul>li>ul>li>a.dynamic-children.arrowDown::after {
+        content: "\f107";
+    }
+    #navbarNav>div>ul>li>ul ul li>a.dynamic-children::after {
+        content: "";
+    }
+    #navbarNav>div>ul>li>ul ul {
+        position: relative;
+        box-shadow: none;
+        width: 100% !important;
+        border: 0 !important;
+        min-width: 10px;
+    }
+    #navbarNav>div>ul>li>ul ul li a {
+        font-size: 12px;
+        line-height: 14px;
+        padding: 0;
+        color: #000 !important;
+    }
+    #navbarNav>div>ul>li>ul ul ul {
+        display: none !important;
+    }
+    #breadCrumbs-container h1.title, #breadCrumbs-container .breadCrumbs, #breadCrumbs-container .breadCrumbs>span, .breadCrumbs a {
+        color: #4D4D4C;
+    }
+    #navbarNav>div>ul>li>ul ul li {
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        padding: 12px 3%;
+    }
+    #all-news-container {
+        padding: 0;
+    }
+    #all-news, #all-news>div {
+        padding: 0;
+    }
+    #all-news .block {
+        margin: 0;
+        box-shadow: none;
+        border-bottom: 1px solid #eee;
+        border-radius: 0;
+    }
+    #all-news>div:last-child .block {
+        border: none;
+    }
+    #all-news-container .mews-date {
+        top: 5px;
+        left: auto;
+        right: 0;
+        background: #e4e4e4;
+    }
+    #all-news-container .news-image {
+        height: auto;
+        position: absolute;
+        margin-top: .5rem;
+    }
+    #all-news-container .news-image img {
+        display: none;
+    }
+    #all-news-container .news-details {
+        padding: 3rem 0px 1rem;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .full-news p {
+        margin-top: 1rem;
+        line-height: 30px;
+    }
+    .full-news .news-image {
+        border: 3px solid #fff;
+        max-width: 100%;
+    }
+    .noPadding, .noPadding>div {
+        padding-right: 15px;
+    }
+    .side-menu>div>ul>li {
+        padding: 15px 25px;
+    }
+    #orientationContent .orientationCompany .companyDetails {
+        margin: 0 1rem;
+    }
+    .orientationCompany .companyDetails .orient {
+        width: 100%;
+    }
+    .orientationCompany .companyDetails .card-header button {
+        flex-wrap: wrap;
+    }
+    .orientationCompany .card-body .lists h4 {
+        margin: 0;
+    }
+    .orientationCompany .card-body .lists ul {
+        padding: 0;
+    }
+    .orientationCompany .card-body .lists ul li {
+        font-size: 19px;
+        margin-bottom: 6px;
+        list-style-position: inside;
+    }
+    #analyset #companyLogo {
+        position: relative;
+        margin: 0 auto 1rem;
+        width: 200px;
+        height: 200px;
+        padding: 0;
+    }
+    .analysetBox {
+        height: auto;
+        margin: 15px 0 !important;
+    }
+    .analysetBox .listPoints ul {
+        padding: 2rem 2.5rem 1rem !important;
+    }
+    .analysetBox h3 {
+        top: -1.5rem !important;
+        bottom: auto !important;
+    }
+    .analysetBox .listPoints {
+        padding: 0 !important;
+    }
+    .analysetBox .listPoints::after {
+        display: none !important;
+    }
+}
+
+/*********************************** Responsive *********************************/
+
+@media (max-width: 767px) {
+    .ShareholdersChart {
+        width: 30vw;
+        height: 30vw;
+    }
+    #lang-container {
+        padding: 5px 1rem !important;
+    }
+    #lang, #seperator {
+        display: none !important;
+    }
+    .noPadding {
+        padding: 1rem;
+    }
+    .noPadding>div {
+        padding: 0 !important;
+    }
+    .edit-icon {
+        width: 30px;
+        height: 30px;
+        top: 0 !important;
+        right: 0 !important;
+        position: relative !important;
+    }
+    .TableBlock .edit-icon, .ChartBlock .edit-icon, .edit-icon.sideMenu {
+        position: absolute !important;
+        top: -15px !important;
+        left: 5% !important;
+        right: auto !important;
+    }
+    .edit-icon.changeBG {
+        position: absolute !important;
+        top: 0 !important;
+        left: 1% !important;
+        right: auto !important;
+    }
+    .edit-icon.sideMenu {
+        position: absolute !important;
+        top: .5rem !important;
+        left: 1rem !important;
+        right: auto !important;
+    }
+    .edit-icon i {
+        font-size: 11px;
+        position: relative !important;
+        top: -1px !important;
+    }
+    .block-content ul, ul.styledList, .SWOT-block ul {
+        padding: 0;
+    }
+    .block-content ul li, ul.styledList li, .SWOT-block ul li {
+        list-style-position: inside;
+    }
+    #company-info .info-blocks {
+        display: block;
+    }
+    #company-info .info-blocks>div {
+        display: inline-flex;
+        width: 100%;
+    }
+    #company-info .description {
+        flex-direction: column;
+    }
+    #company-info .description>div {
+        width: 100%;
+    }
+    #company-info .description .logo-container {
+        width: 100pt;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+    .HomeCompanies>div {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+    .HomeCompanies .CompanyContainer {
+        flex-direction: row;
+        height: auto;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: 0 10px 0;
+    }
+    .HomeCompanies img {
+        position: relative;
+        top: 15px;
+    }
+    .HomeCompanies .row {
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-right: 110px;
+        position: relative;
+        bottom: 20px;
+    }
+    .HomeCompanies h5 {
+        height: auto;
+        margin: 0 10px;
+    }
+    .HomeCompanies .row>div {
+        flex-direction: row;
+        width: auto;
+    }
+    .HomeCompanies h6 {
+        margin: 0 10px;
+    }
+    .InvestmentSectors {
+        padding: 0 .5rem;
+    }
+    .InvestmentSectors>div {
+        width: 100%;
+        height: auto;
+    }
+    .InvestmentSectors>div img {
+        position: absolute;
+        height: auto;
+    }
+    .InvestmentSectors>div .Content {
+        position: relative;
+        height: 100%;
+        width: 80%;
+        margin-right: auto;
+    }
+    .InvestmentSectors>div .Content>a {
+        top: 0;
+        display: block;
+        text-align: right;
+        font-size: 20px;
+    }
+    .InvestmentSectors>div ul {
+        margin-top: .75rem;
+        padding-right: 15px;
+    }
+    .InvestmentSectors>div ul li a {
+        font-size: 19px;
+    }
+    .InvestmentSectors>div .Content p {
+        top: 0;
+        display: none;
+    }
+    .InvestmentSectors>div:hover .Content>a {
+        top: 0;
+    }
+    .sector-content-container .dynamic-row>div {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .sector-content-container .block-content {
+        padding: 5px 0 !important;
+    }
+    .sector-content-container .block-content .row {
+        margin: 0;
+    }
+    .sector-content-container .block-content.row>div {
+        padding: 0;
+    }
+    .sector-content-container .block-content .row>div {
+        padding: 0;
+    }
+    .document-container #myTab li a {
+        padding: .75rem;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ShareholdersChart {
+        width: 80vw;
+        height: 80vw;
+    }
+    div#chart-legends {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+    .HomeCompanies>div {
+        padding: 0;
+    }
+    .HomeCompanies .CompanyContainer {
+        padding: 10px;
+    }
+    .HomeCompanies img {
+        display: none;
+    }
+    .HomeCompanies .row {
+        padding-right: 0;
+        bottom: 0;
+    }
+    .HomeCompanies h5 {
+        margin: 8px 10px 5px;
+    }
+    .HomeCompanies .row>div {
+        flex-direction: row;
+        width: auto;
+    }
+    .HomeCompanies h6 {
+        margin: 0 10px;
+    }
+    .InvestmentSectors>div .Content {
+        width: 100%;
+        background: rgba(255, 255, 255, .92);
+    }
+    .document-container #myTab {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .document-container #myTab li a {
+        font-size: 17px;
+        background: transparent !important;
+        border: none;
+        white-space: nowrap;
+        text-align: right;
+        padding: 5px;
+    }
+}

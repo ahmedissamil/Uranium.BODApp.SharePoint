@@ -1,0 +1,338 @@
+﻿.col-md-12 table {
+    width: 100%;
+}
+
+.col-md-12 table .col-md-12 {
+    padding: 0;
+}
+
+#siteUsers-container {
+    padding: 2rem;
+    direction: ltr;
+    text-align: left;
+}
+
+#newPassword-container {
+    padding: 0;
+    margin: -8px 24px;
+}
+
+.btn.btn-info {
+    background-color: #0075C8 !important;
+    border-color: #0075C8 !important;
+    color: #fff !important;
+}
+
+.btn.btn-info:hover,
+.btn.btn-info:active {
+    background-color: #0269b3 !important;
+    border-color: #0269b3 !important;
+}
+
+#siteUsers-container .btn.btn-primary {
+    float: left;
+    margin: 0 0 2rem 0;
+    padding: .5rem 2rem;
+}
+
+#siteUsers-container .btn.btn-primary svg {
+    margin: 0 5px;
+}
+
+table#siteUsers {
+    border-bottom: 1px solid #d7d7dc;
+    text-align: left;
+}
+
+table#siteUsers .usericon {
+    width: 35px;
+    margin-right: 10px;
+}
+
+table#siteUsers tr td:first-child,
+table#siteUsers tr th:first-child {
+    padding-left: 15px;
+}
+
+table#siteUsers thead th {
+    border-bottom: none;
+    font-weight: normal;
+    padding: 15px 15px;
+    border-top: 1px solid #d7d7dc;
+    border-bottom: 1px solid #d7d7dc;
+}
+
+table#siteUsers tbody td,
+table#siteUsers tbody th {
+    padding: 8px 20px;
+    font-size: 15px;
+    vertical-align: middle !important;
+}
+
+table#siteUsers td.actions {
+    padding: 12px 10px !important;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    justify-content: flex-start;
+}
+
+table#siteUsers td.actions .icon {
+    margin: 0 3px;
+    font-size: 16px;
+    color: #797973;
+    cursor: pointer;
+    transition: all .3s;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+table#siteUsers td.actions .icon:hover {
+    color: #0075c8;
+}
+
+.ui-switcher {
+    background-color: #bdc1c2;
+    display: inline-block;
+    height: 20px;
+    width: 48px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin: 2px 4px 0 0;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.ui-switcher:before {
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    height: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+.ui-switcher[aria-checked=false]:before {
+    content: 'OFF';
+    right: 7px;
+}
+
+.ui-switcher[aria-checked=true]:before {
+    content: 'ON';
+    left: 7px;
+}
+
+.ui-switcher[aria-checked=true] {
+    background-color: #25ba9a;
+}
+
+.ui-switcher:after {
+    background-color: #ffffff;
+    content: '\0020';
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    transition: left 0.25s;
+}
+
+.ui-switcher[aria-checked=false]:after {
+    left: 2px;
+}
+
+.ui-switcher[aria-checked=true]:after {
+    left: 30px;
+}
+
+#siteUsers-container {
+    padding: 10px 0;
+    direction: ltr;
+    text-align: left;
+}
+
+#siteUsers-container .user-form {
+    padding: 0;
+}
+
+#siteUsers-container .user-form img {
+    display: none;
+}
+
+.btn {
+    padding: .375rem .75rem !important;
+    font-size: 1rem !important;
+}
+
+#siteUsers-container .btn-secondary {
+    color: #fff !important;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+}
+
+#siteUsers-container .btn-secondary:hover {
+    color: #fff;
+    background-color: #5a6268 !important;
+    border-color: #545b62 !important;
+}
+
+#siteUsers-container .btn.btn-primary {
+    float: left;
+    margin: 0 0 2rem 0;
+    padding: .5rem 2rem;
+}
+
+#siteUsers-container .btn.btn-primary svg {
+    margin: 0 5px;
+}
+
+table#siteUsers {
+    border-bottom: 1px solid #d7d7dc;
+    text-align: left;
+}
+
+table#siteUsers .usericon {
+    width: 35px;
+    margin-right: 10px;
+}
+
+table#siteUsers tr td:first-child,
+table#siteUsers tr th:first-child {
+    padding-left: 15px;
+}
+
+table#siteUsers thead th {
+    border-bottom: none;
+    font-weight: normal;
+    padding: 15px 15px;
+    border-top: 1px solid #d7d7dc;
+    border-bottom: 1px solid #d7d7dc;
+}
+
+table#siteUsers tbody td,
+table#siteUsers tbody th {
+    padding: 8px 20px;
+    font-size: 15px;
+    vertical-align: middle !important;
+}
+
+table#siteUsers td.actions {
+    padding: 12px 10px !important;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    justify-content: flex-start;
+}
+
+table#siteUsers td.actions .icon {
+    margin: 0 3px;
+    font-size: 16px;
+    color: #797973;
+    cursor: pointer;
+    transition: all .3s;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+table#siteUsers td.actions .icon:hover {
+    color: #0075c8;
+}
+
+.ui-switcher {
+    background-color: #bdc1c2;
+    display: inline-block;
+    height: 20px;
+    width: 48px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin: 2px 4px 0 0;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.ui-switcher:before {
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    height: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+.ui-switcher[aria-checked=false]:before {
+    content: 'OFF';
+    right: 7px;
+}
+
+.ui-switcher[aria-checked=true]:before {
+    content: 'ON';
+    left: 7px;
+}
+
+.ui-switcher[aria-checked=true] {
+    background-color: #25ba9a;
+}
+
+.ui-switcher:after {
+    background-color: #ffffff;
+    content: '\0020';
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    transition: left 0.25s;
+}
+
+.ui-switcher[aria-checked=false]:after {
+    left: 2px;
+}
+
+.ui-switcher[aria-checked=true]:after {
+    left: 30px;
+}
+
+.emailFields {
+    display: none;
+    margin-top: 10px;
+    background: #f5f5f5;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+
+.ms-error {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.ms-error br {
+    display: none;
+}

@@ -1,0 +1,2287 @@
+﻿/******** default classes *********/
+@font-face {
+    font-family: SakkalMajalla;
+    src: url('/_layouts/URANIUM.Ekuity.BOD/Fonts/Sakkal Majalla V1.eot');
+}
+
+.btn.focus, .btn:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+@page {
+    margin-top: 20px;
+}
+
+.inner {
+    display: none;
+}
+
+.fc-daygrid-event-harness {
+    cursor: pointer
+}
+
+.fc .fc-popover-title {
+    direction: rtl;
+}
+
+.BODModel .modal-body {
+    max-height: 90vh !important;
+}
+
+.selectedItem {
+    background-color: #f1f1f1;
+}
+
+.grayHeading {
+    font-family: 'SakkalBold';
+    color: #777;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgb(204 204 204 / 25%);
+}
+
+.iconField,
+.timeField {
+    position: relative;
+}
+
+    .timeField span {
+        position: absolute;
+        top: 0rem;
+        width: 36px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+        color: #a4a4a4;
+        font-size: 18px !important;
+    }
+
+    .timeField input.form-control {
+        padding: .375rem 2.75rem !important;
+    }
+
+    .iconField i {
+        position: absolute;
+        left: 1rem;
+        top: .7rem;
+        color: #777;
+        z-index: 0;
+    }
+
+.blueHeading {
+    color: rgb(30,106,184);
+    /* font-family: CairoBold; */
+    font-family: SakkalBold;
+    font-size: 22px;
+}
+
+.blueBtn {
+    background-color: transparent;
+    border: 1px solid rgb(30,106,184);
+    color: rgb(30,106,184);
+    font-family: CairoBold;
+    border-radius: 3px;
+    transition: all .3s ease-out;
+}
+
+    .blueBtn:hover {
+        background-color: rgb(30,106,184);
+        color: #fff;
+    }
+
+.meetingDetail .locationHref {
+    position: relative;
+}
+
+    .meetingDetail .locationHref a {
+        position: absolute;
+        background-color: rgb(30,106,184);
+        display: flex;
+        width: 25px;
+        height: 25px;
+        color: #fff;
+        left: .3rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        bottom: 4px;
+    }
+
+.note-editor button {
+    min-width: 3rem !important;
+}
+
+.dataTables_paginate {
+    width: 100%;
+    text-align: center !important;
+}
+
+    .dataTables_paginate a.paginate_button {
+        border: 1px solid #dedede !important;
+        margin: .5rem;
+    }
+
+.changeBtns {
+    display: flex;
+    margin: 1rem 0;
+    flex-direction: row;
+    justify-content: center;
+}
+
+    .changeBtns button {
+        margin: 0 .5rem;
+        width: 200px;
+    }
+
+.popupBox {
+    font-family: CairoSemiBold;
+}
+
+    .popupBox button {
+        margin-top: 1rem !important;
+    }
+
+#returnReCommand,
+#recommendView {
+    font-weight: bold !important;
+}
+
+.employeeItem {
+    display: flex;
+    align-items: center;
+    padding: .5rem 0;
+    flex-direction: row;
+    margin-bottom: 11px;
+}
+
+    .employeeItem .employeeImg {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+        .employeeItem .employeeImg img {
+            width: 100%;
+            height: 100%;
+        }
+
+    .employeeItem .employeeName {
+        margin-right: .5rem;
+    }
+
+        .employeeItem .employeeName h5 {
+            font-family: 'CairoBold';
+            font-size: 1rem;
+        }
+
+        .employeeItem .employeeName h6 {
+            font-size: 1rem;
+            font-family: 'SakkalBold';
+            color: #777;
+            margin-bottom: 0;
+        }
+/************ new meeting page **************/
+.newMeeting,
+#assignResponsible,
+.itemsBefore {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+    .newMeeting .meetingForm {
+        background-color: #fbfbfe;
+        padding: 1rem;
+    }
+
+        .newMeeting .meetingForm .form-row {
+            margin-bottom: 20px !important;
+        }
+
+    .newMeeting .form-control {
+        border: 1px solid #e8e8e8 !important;
+        font-size: 1.05rem !important;
+    }
+
+    .newMeeting #meetingFrom,
+    .newMeeting #meetingTo {
+        text-align: left;
+        direction: ltr;
+        padding: 12px !important
+    }
+
+    .newMeeting .meetingForm h5:not(:last-child) {
+        margin-bottom: 1rem !important;
+    }
+
+    .newMeeting select {
+        -moz-appearance: none; /* Firefox */
+        -webkit-appearance: none; /* Safari and Chrome */
+        appearance: none;
+        font-size: .85rem !important;
+        height: 38px;
+    }
+
+    .newMeeting .headingForm {
+        margin-bottom: 1.4rem;
+    }
+
+    .newMeeting .meetingForm label {
+        font-family: 'SakkalBold';
+        margin-bottom: .5rem;
+        color: #777;
+        font-size: 20px;
+        min-height: 26px;
+    }
+
+    .newMeeting .attachBox {
+        border: 1px dashed rgb(30,106,184);
+        padding: 1rem;
+        width: 80%;
+        margin: 1rem auto;
+        border-radius: 3px;
+    }
+
+    .newMeeting .attachsBlock {
+        display: none;
+    }
+
+    .newMeeting .fileOpacity {
+        display: flex;
+        flex-direction: row;
+        width: 245px;
+        position: relative;
+        align-items: center;
+        margin: 1rem auto;
+        cursor: pointer;
+        justify-content: space-evenly;
+    }
+
+        .newMeeting .fileOpacity input[type="file"] {
+            position: absolute;
+            width: 100%;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 13;
+            padding: 0;
+        }
+
+        .newMeeting .fileOpacity span {
+            background-color: #fff;
+            padding: .2rem .5rem;
+            color: rgb(30,106,184);
+            cursor: pointer;
+            border: 1px solid #dedede;
+        }
+
+.returnFiles .row {
+    padding: 1rem 0;
+    font-family: 'CairoRegular';
+    color: #777;
+    text-align: center;
+    font-style: italic;
+}
+
+.newMeeting .fileOpacity h5 {
+    margin: 0;
+}
+
+.newMeeting button.blueBtn {
+    width: 200px;
+    display: block;
+    margin: 1rem auto;
+}
+
+.newMeeting .attachBox p {
+    color: #777;
+    font-family: CairoRegular;
+}
+
+
+/************** my tasks page ***************/
+a:hover {
+    text-decoration: none;
+}
+
+#TaskTable table {
+    border-bottom: none !important;
+}
+
+#myTasks table tr:hover {
+    background-color: #f7f8fd !important;
+}
+
+#myTasks tbody tr:hover td {
+    color: #3980b3 !important;
+}
+
+.blockLinks {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+    .blockLinks a {
+        -webkit-box-shadow: 0px 0px 3px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 3px -1px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 3px -1px rgba(0,0,0,0.75);
+        padding: .5rem 1rem;
+        border-radius: 3px;
+        font-family: CairoSemiBold !important;
+        margin-right: 1rem;
+        color: rgb(30,106,184);
+        transition: all .3s ease-out;
+        font-size: 13px;
+    }
+
+        .blockLinks a:hover {
+            background-color: rgb(30,106,184);
+            color: #fff !important;
+        }
+
+        .blockLinks a:visited {
+            color: rgb(30,106,184);
+        }
+
+        .blockLinks a i {
+            margin-left: .4rem;
+        }
+
+.filterBlock {
+    background-color: #fbfbfe;
+    padding: 1rem;
+    margin: 2rem 0rem 0;
+    background-color: #f8f9fb;
+    box-shadow: 0px 0px 3px -1px rgb(150 150 150);
+}
+
+    .filterBlock label {
+        margin-bottom: .6rem;
+        /* font-family: CairoSemiBold !important; */
+        color: #666;
+        font-family: 'SakkalBold';
+        font-size: 20px;
+        min-height: 20px;
+    }
+
+    .filterBlock select {
+        -moz-appearance: none; /* Firefox */
+        -webkit-appearance: none; /* Safari and Chrome */
+        appearance: none;
+        font-size: 1.05rem !important;
+        background-color: #fff !important;
+        height: 38px;
+        padding-left: 40px !important;
+    }
+
+    .filterBlock .form-control {
+        border: 1px solid #e0e0e0 !important;
+    }
+
+    .filterBlock .btnSearch {
+        display: flex;
+        flex-direction: column-reverse;
+        min-height: 100%;
+        position: relative;
+        margin-bottom: 1.8%;
+    }
+
+    .filterBlock button {
+        background-color: #2a6ba2;
+        color: #fff;
+        font-family: 'CairoRegular';
+        border-radius: 2px;
+        font-size: 15px !important;
+    }
+
+table.tableMeeting {
+    border-collapse: separate;
+    border-spacing: 0 15px !important;
+    margin-bottom: 0 !important;
+    font-size: .8rem;
+    width: 100% !important;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+    display: none;
+}
+
+table.tableMeeting tbody tr {
+    margin: 1rem 0;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 3px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px -1px rgba(0,0,0,0.75);
+    border-radius: 3px;
+}
+
+tbody tr:hover {
+    background-color: #fbfbfe;
+}
+
+table.tableMeeting thead th {
+    color: #777;
+    font-family: 'SakkalBold';
+    white-space: nowrap;
+    border: none !important;
+    padding-right: .6rem !important;
+    font-size: 18px;
+}
+
+table.tableMeeting tbody tr td {
+    border: none !important;
+    font-family: 'SakkalRegular';
+    color: #848484;
+    vertical-align: middle;
+    white-space: nowrap;
+    max-width: 100px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.1rem;
+}
+
+    table.tableMeeting tbody tr td:focus {
+        outline: none !important;
+    }
+
+table.tableMeeting tbody tr:hover td {
+    color: #2a6ba2;
+}
+
+.tableDateBox table.tableMeeting tbody tr td:first-child {
+    padding: 0;
+    width: 80px;
+}
+
+.tableDateBox .forDetails {
+    text-align: center;
+    cursor: pointer;
+}
+
+    .tableDateBox .forDetails i {
+        font-size: .9rem !important;
+    }
+
+table.tableMeeting tr .forDetails button {
+    display: none;
+    color: rgb(30,106,184);
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 4px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 4px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px -2px rgba(0,0,0,0.75);
+    transform: translate(63px, 28px);
+    border: none;
+    padding: .5rem 1.3rem;
+}
+
+table.tableMeeting tr .forDetails .opacityMenu {
+    display: none;
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 4px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 4px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px -2px rgba(0,0,0,0.75);
+    left: 0;
+}
+
+    table.tableMeeting tr .forDetails .opacityMenu button {
+        display: block !important;
+        box-shadow: none;
+        position: relative;
+        transform: translate(0px, 0px);
+    }
+
+table.tableMeeting tbody .dateTD {
+    text-align: center;
+    border: 2px solid rgb(30,106,184);
+    height: 82px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+    table.tableMeeting tbody .dateTD .dayNum {
+        font-size: .9rem;
+    }
+
+table.tableMeeting tbody .meetingMonth {
+    padding: .3rem 0;
+    background-color: rgb(30,106,184);
+    color: #fff;
+}
+
+table.tableMeeting tbody .meetingDay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    table.tableMeeting tbody .meetingDay span:last-child {
+        color: #999;
+    }
+
+.tableRow {
+    font-family: CairoSemiBold;
+}
+
+    .tableRow tr {
+        height: 50px;
+    }
+
+    .tableRow th {
+        background-color: #f1f1f1;
+        border-bottom: 2px solid #fff;
+        padding: 1rem;
+        width: 180px;
+    }
+
+    .tableRow td {
+        padding-right: 1rem;
+    }
+
+#Tasks tbody tr {
+    height: 52px !important;
+}
+
+    #Tasks tbody tr .imgpdf {
+        width: 25px;
+        margin-left: .2rem;
+    }
+
+/************* assgin Responsibles page ***************/
+.modal-body {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.assignResponsible .meetingDetail {
+    background-color: #fbfbfe;
+    padding: 1rem;
+    margin: 1rem 0;
+    -webkit-box-shadow: 0px 0px 4px -1px rgba(204,204,204,1);
+    -moz-box-shadow: 0px 0px 4px -1px rgba(204,204,204,1);
+    box-shadow: 0px 0px 4px -1px rgba(204,204,204,1);
+}
+
+    .assignResponsible .meetingDetail label {
+        font-family: CairoBold;
+        margin-bottom: .5rem;
+    }
+
+    .assignResponsible .meetingDetail input {
+        color: rgb(30,106,184);
+        font-family: CairoRegular;
+        border: 1px solid #ececec !important;
+    }
+
+    .assignResponsible .meetingDetail h6.grayHeading {
+        margin: 1rem 0;
+    }
+
+    .assignResponsible .meetingDetail button {
+        width: 100%;
+        background-color: rgb(30,106,184);
+        border: 1px solid rgb(30,106,184);
+        color: #fff;
+        border-radius: 3px;
+        font-family: CairoRegular;
+        padding: .5rem !important;
+    }
+
+        .assignResponsible .meetingDetail button i {
+            margin-left: .5rem;
+        }
+
+.assignResponsible .attachsBlock {
+    background-color: #fbfbfe;
+}
+
+.assignResponsible .employeeItem {
+    width: 90%;
+}
+
+    .assignResponsible .employeeItem:not(:last-child) {
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+.assignResponsible #addEmployee,
+.assignResponsible #addExternalEmployee,
+.modalExternalEmployee #newExternal,
+.modalEmployee .row button {
+    display: flex;
+    flex-direction: row;
+    color: rgb(30,106,184);
+    font-family: 'CairoBold';
+    align-items: center;
+    padding-right: 0 !important;
+    margin-top: .6rem;
+    margin-bottom: .7rem;
+    border: none;
+    transition: all .3s ease-out;
+}
+
+    .assignResponsible #addEmployee:hover,
+    .assignResponsible #addExternalEmployee:hover,
+    .modalExternalEmployee #newExternal:hover,
+    .modalEmployee .row button:hover {
+        background-color: transparent;
+        color: #000;
+        border: none;
+    }
+
+    .modalExternalEmployee #newExternal i,
+    .modalEmployee .row button i {
+        margin-left: .5rem;
+    }
+
+    .assignResponsible #addEmployee i,
+    .assignResponsible #addExternalEmployee i {
+        margin-left: .5rem;
+        font-size: 2.3rem;
+    }
+
+.modalHeading h5 {
+    font-family: CairoBold;
+    color: #6161a0;
+}
+
+.modalEmployee .selectItem .employeeImg {
+    margin-right: .5rem;
+}
+
+.dropSelected .permession {
+    position: absolute;
+    left: 1rem;
+}
+
+.modalEmployee .infoRespon {
+    text-align: center;
+}
+
+    .modalEmployee .infoRespon p {
+        font-size: .8rem;
+        width: 35%;
+        color: #929292;
+        text-align: center;
+        display: inline-block;
+        font-family: 'CairoRegular'
+    }
+
+.dropSelected .permession button {
+    font-size: .6rem !important;
+}
+
+.modalExternalEmployee > h5 {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.externalEmployee {
+    background-color: #fff;
+    padding: 1rem;
+    -webkit-box-shadow: 0px 0px 5px -4px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 0px 0px 5px -4px rgb(0 0 0 / 75%);
+    box-shadow: 0px 0px 5px -4px rgb(0 0 0 / 75%);
+    margin-bottom: 2rem;
+}
+
+.selectItem,
+.allRespons {
+    max-height: 335px;
+    overflow-y: auto;
+}
+
+    .allRespons .employeeItem,
+    .dropSelected .employeeItem {
+        cursor: pointer;
+        padding: 1rem;
+        position: relative;
+    }
+
+        .allRespons .employeeItem .employeeImg {
+            margin-right: .5rem;
+        }
+
+        .allRespons .employeeItem:not(:last-child),
+        .dropSelected .employeeItem:not(:last-child) {
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .allRespons .employeeItem:hover,
+        .dropSelected .employeeItem:hover,
+        .externalEmployee .employeeItem:hover {
+            background-color: #f1f1f1;
+        }
+
+.modalBtns button {
+    border: 1px solid #6161a0;
+    width: 190px;
+    padding: .5rem !important;
+    margin: 0 .5rem;
+    font-family: 'CairoBold';
+    color: #6161a0;
+    transition: all .3s ease-out;
+}
+
+    .modalBtns button:hover {
+        background-color: #6161a0;
+        color: #fff;
+    }
+
+.externalEmployee .employeeItem .employeeName {
+    margin-right: 1rem;
+}
+
+.externalEmployee .employeeItem:not(:last-child) {
+    border-bottom: 1px solid #e8e7e7;
+}
+
+.externalform h5 {
+    margin-bottom: 2rem;
+}
+
+.externalform .form-group {
+    margin: 1.5rem 0;
+}
+
+.externalform label {
+    font-family: 'CairoRegular';
+    margin-bottom: .4rem;
+}
+
+.externalform input {
+    -webkit-box-shadow: 0px 0px 4px -2px rgb(187 187 187 / 75%);
+    -moz-box-shadow: 0px 0px 4px -2px rgb(187 187 187 / 75%);
+    box-shadow: 0px 0px 4px -2px rgb(187 187 187 / 75%);
+}
+
+.externalform .modalBtns {
+    margin-top: 2rem;
+}
+
+.externalform .dragImgBlock {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border: 1px dashed #ccc;
+    background-color: #f1f1f1;
+    color: #8e8e8e
+}
+
+    .externalform .dragImgBlock .dragTitle {
+        margin-top: 1rem;
+    }
+
+        .externalform .dragImgBlock .dragTitle h5,
+        .externalform .dragImgBlock p {
+            font-family: CairoRegular;
+        }
+
+
+.externalform input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+/************ Dashboard page ***************/
+/* .Dashboard{
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px -2px rgba(0,0,0,0.75);
+} */
+
+.Dashboard .boxShadow {
+    -webkit-box-shadow: 0px 0px 4px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 4px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px -2px rgba(0,0,0,0.75);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.Dashboard .headingTable {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+    .Dashboard .headingTable h5 {
+        margin: 0;
+        font-size: 22px;
+    }
+
+    .Dashboard .headingTable a {
+        font-family: 'SakkalBold';
+        color: rgb(30,106,184);
+    }
+
+.Dashboard .table {
+    font-family: CairoRegular;
+    border-collapse: separate;
+    border-spacing: 0 11px;
+    margin-bottom: 0;
+    width: 100% !important;
+    border-bottom: 0 !important;
+}
+
+    .Dashboard .table thead th {
+        border: none;
+        color: #777;
+        padding-bottom: 0;
+        font-family: 'SakkalBold';
+        font-size: 18px;
+    }
+
+    .Dashboard .table tbody td {
+        outline: none;
+        max-width: 60px;
+        overflow: hidden;
+        vertical-align: middle;
+        white-space: nowrap;
+        font-family: 'SakkalRegular';
+        text-overflow: ellipsis;
+    }
+
+        .Dashboard .table tbody td:last-child {
+            position: relative;
+            overflow: inherit;
+        }
+
+.Dashboard .noEvents {
+    text-align: center;
+    color: #777;
+    font-family: CairoBold;
+}
+
+.Dashboard .calendarShadow {
+    -webkit-box-shadow: 0px 0px 4px -2px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 0px 0px 4px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px -2px rgb(0 0 0 / 75%);
+    padding: 0;
+    height: max-content;
+    margin-bottom: 1rem;
+}
+
+.Dashboard button#allEvents {
+    display: flex;
+    margin: 0 auto .5rem;
+    font-family: 'CairoBold';
+    color: #5ea8dc;
+    border: none;
+}
+
+    .Dashboard button#allEvents:hover {
+        background-color: transparent;
+        border: none;
+    }
+
+.Dashboard .viewDetails {
+    -webkit-box-shadow: 0px 0px 4px -2px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 0px 0px 4px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px -2px rgb(0 0 0 / 75%);
+    padding: 0.8rem;
+    margin: 0 auto 1rem;
+    width: 90%;
+    font-family: 'CairoSemiBold';
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .Dashboard .viewDetails:hover {
+        background-color: #f7f8fd;
+        color: #007dff;
+    }
+
+.Dashboard .datepicker td {
+    cursor: pointer;
+}
+
+.Dashboard .noEvent {
+    padding: 1rem;
+    text-align: center;
+    font-family: 'CairoBold';
+    color: #777;
+}
+
+.Dashboard .datepicker td.active {
+    background-color: #e4f0f9;
+}
+
+.Dashboard .viewDetails h6 {
+    font-family: 'CairoSemiBold';
+    font-size: .9rem;
+    margin-bottom: 0;
+}
+
+.Dashboard .viewDetails span {
+    display: inline-flex;
+    font-size: .8rem;
+    margin-bottom: .6rem;
+}
+
+.Dashboard .viewDetails p {
+    font-size: .8rem;
+    color: #888;
+}
+
+    .Dashboard .viewDetails p i {
+        margin-left: .5rem;
+    }
+
+    .Dashboard .viewDetails p span {
+        direction: ltr;
+    }
+
+.Dashboard .detailsBlock {
+    text-align: left;
+    position: relative;
+}
+
+    .Dashboard .detailsBlock span {
+        width: 31px;
+        height: 23px;
+        cursor: pointer;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Dashboard .detailsBlock .opacityMenu {
+        display: none;
+        position: absolute;
+        top: 1.2rem;
+        left: 1rem;
+    }
+
+    .Dashboard .detailsBlock button {
+        background-color: #fff;
+        border: 1px solid #dedede;
+        min-width: 140px;
+    }
+
+.Dashboard .datepicker-inline {
+    box-shadow: none;
+}
+
+.Dashboard .table tbody td .forDetails {
+    padding: .3rem .4rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+    .Dashboard .table tbody td .forDetails button {
+        display: none;
+        position: absolute;
+        opacity: 1;
+        top: 2.4rem;
+        right: 1rem;
+        z-index: 9;
+    }
+
+.Dashboard .table tbody tr {
+    background-color: #f6f6f6;
+    color: #4c4c75;
+    height: 48px;
+    cursor: pointer;
+}
+
+    .Dashboard .table tbody tr:hover {
+        background-color: #f7f8fd;
+        color: #007dff;
+    }
+
+.Dashboard .kindMeetings {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+    .Dashboard .kindMeetings .meetingInfo {
+        display: flex;
+        flex-direction: row;
+        margin: .3rem 0;
+        padding: 1rem .5rem;
+        color: #fff;
+        font-family: 'SakkalRegular';
+        border-radius: 4px;
+        font-size: 18px;
+        align-items: center;
+    }
+
+        .Dashboard .kindMeetings .meetingInfo .meetingLength {
+            width: 27px;
+            text-align: center;
+            border: 1px solid;
+            border-radius: 50%;
+            height: 26px;
+            margin-left: .6rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+@keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.loadData {
+    padding: 1rem 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    .animy,
+    .loadData i {
+        animation: rotating 1s linear infinite;
+        color: #2a6ba2;
+    }
+
+    .loadData span {
+        color: #777;
+        font-family: 'CairoSemiBold';
+    }
+
+/************ add items before meeting ****************/
+.returnMeetingData {
+    background-color: #fafaff;
+    padding: 1rem;
+    font-family: CairoBold;
+    -webkit-box-shadow: 0px 0px 4px -1px rgb(204 204 204);
+    -moz-box-shadow: 0px 0px 4px -1px rgba(204,204,204,1);
+    box-shadow: 0px 0px 4px -1px rgb(204 204 204);
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.AttentionSplit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+    .AttentionSplit > div {
+        width: 47% !important;
+        margin: auto !important;
+    }
+
+    .AttentionSplit .attentionBox {
+        display: block !important;
+    }
+
+.returnMeetingData label {
+    margin-bottom: .5rem;
+    color: #777;
+    font-size: 19px;
+    font-family: 'SakkalBold';
+}
+
+.returnMeetingData input {
+    color: rgb(30,106,184) !important;
+    font-size: 0.8rem;
+    font-size: 16px;
+    font-family: 'SakkalBold';
+}
+
+.returnMeetingData button {
+    width: 100%;
+    background-color: rgb(30,106,184);
+    color: #fff;
+    padding: .5rem !important;
+}
+
+.returnMeetingData .viewAttend button {
+    margin-top: 1rem;
+}
+
+.returnMeetingData button:hover {
+    color: #fff;
+}
+
+.returnMeetingData button i {
+    margin-left: .4rem;
+}
+
+.returnMeetingData span.timeMeeting {
+    color: #777;
+    font-size: .8rem;
+    display: inline-flex;
+    direction: ltr;
+}
+
+.returnMeetingData .viewRespons,
+.returnMeetingData .viewAttend {
+    border-right: 4px solid #fff;
+}
+
+.returnMeetingData h5.grayHeading {
+    font-size: 19px;
+}
+
+.returnMeetingData .returnEmployee {
+    height: 286px;
+    padding: 1rem;
+    background-color: #fff;
+    overflow-y: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 4px -1px rgb(204 204 204);
+    -moz-box-shadow: 0px 0px 4px -1px rgba(204,204,204,1);
+    box-shadow: 0px 0px 4px -1px rgb(204 204 204);
+}
+
+    .returnMeetingData .returnEmployee::-webkit-scrollbar,
+    .allRespons::-webkit-scrollbar,
+    .selectItem::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    .returnMeetingData .returnEmployee::-webkit-scrollbar-track,
+    .allRespons::-webkit-scrollbar-track,
+    .selectItem::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .returnMeetingData .returnEmployee::-webkit-scrollbar-thumb,
+    .allRespons::-webkit-scrollbar-thumb,
+    .selectItem::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+        .returnMeetingData .returnEmployee::-webkit-scrollbar-thumb:hover,
+        .allRespons::-webkit-scrollbar-thumb:hover,
+        .selectItem::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+    .returnMeetingData .returnEmployee .employeeItem:not(:last-child) {
+        border-bottom: 1px solid #dedede;
+    }
+
+.AfterMeeting .returnEmployee .employeeItem:not(:last-child) {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.AfterMeeting .returnEmployee .employeeItem {
+    width: 90%;
+}
+
+.attentionMeeting {
+    background-color: #fafaff;
+    padding: 1rem;
+    -webkit-box-shadow: 0px 0px 3px 0px rgb(204 204 204);
+    -moz-box-shadow: 0px 0px 3px 0px rgb(204 204 204);
+    box-shadow: 0px 0px 3px 0px rgb(204 204 204);
+}
+
+    .attentionMeeting label {
+        color: #777;
+        font-family: CairoBold;
+    }
+
+    .attentionMeeting textarea {
+        border-radius: 5px;
+        max-width: 60%;
+        margin-top: 1rem;
+        font-family: 'SakkalRegular';
+        min-height: 100px
+    }
+
+    .attentionMeeting .formInline {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+        .attentionMeeting .formInline button {
+            height: 100px;
+            margin-bottom: 0 !important;
+            margin-right: 1rem;
+            font-family: 'CairoRegular';
+        }
+
+.itemsMeetingBlock > h5 {
+    margin: 1rem 0;
+    font-size: 22px;
+}
+
+.itemsMeetingBlock .itemMeeting .fields {
+    background-color: #f5fbf7;
+    padding: 1.5rem;
+    font-family: CairoBold;
+    margin: 1rem 0;
+    -webkit-box-shadow: 0px 0px 3px 0px rgb(204 204 204);
+    -moz-box-shadow: 0px 0px 3px 0px rgb(204 204 204);
+    box-shadow: 0px 0px 3px 0px rgb(204 204 204);
+}
+
+    .itemsMeetingBlock .itemMeeting .fields .inputNumber,
+    .itemsMeetingBlock .itemMeeting .fields .headingItem {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .itemsMeetingBlock .itemMeeting .fields .headingItem {
+        color: #1478c5;
+        align-items: baseline;
+    }
+
+        .itemsMeetingBlock .itemMeeting .fields .headingItem label {
+            font-size: 1.6rem;
+            width: 55px;
+            justify-content: center;
+            display: flex;
+        }
+
+        .itemsMeetingBlock .itemMeeting .fields .headingItem h5 {
+            font-family: CairoBold;
+            min-width: 220px;
+            padding: .5rem;
+            border-radius: 3px;
+            font-size: 15px;
+        }
+
+.itemsMeetingBlock .itemMeeting .editableBlock {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #f3f3f3;
+    padding: .5rem;
+    font-family: SakkalRegular !important;
+    font-size: 16px;
+}
+
+.editableBlockk {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #f3f3f3;
+    padding: .5rem;
+    font-family: SakkalRegular !important;
+    font-weight: bold;
+    font-family: CairoBold;
+}
+
+.itemsMeetingBlock .itemMeeting .editableBlock ul,
+.itemsMeetingBlock .itemMeeting .editableBlock ol {
+    margin-bottom: 0;
+}
+
+    .itemsMeetingBlock .itemMeeting .editableBlock ul li,
+    .itemsMeetingBlock .itemMeeting .editableBlock ol li {
+        list-style-image: url("/Style Library/EkuityDesign/Images/Icons/bullet.png");
+        margin: .5rem 0;
+    }
+
+.itemsMeetingBlock .itemMeeting .fields .eventItem button {
+    display: block;
+    font-size: .7rem !important;
+    width: 107px;
+    transition: all .3s ease-out;
+}
+
+    .itemsMeetingBlock .itemMeeting .fields .eventItem button#deleteItem {
+        color: #fd3838;
+        border: 1px solid #fd3838;
+        margin-bottom: .3rem;
+    }
+
+    .itemsMeetingBlock .itemMeeting .fields .eventItem button#editItem {
+        color: #4949f3;
+        border: 1px solid #4949f3;
+    }
+
+.itemsMeetingBlock .itemNum {
+    font-family: CairoBold;
+    padding: 1.5rem;
+    background-color: #fdfdfd;
+    margin: 1rem 0;
+    -webkit-box-shadow: 0px 0px 3px 0px rgb(204 204 204);
+    -moz-box-shadow: 0px 0px 3px 0px rgb(204 204 204);
+    box-shadow: 0px 0px 3px 0px rgb(204 204 204);
+}
+
+    .itemsMeetingBlock .itemNum label,
+    .itemsMeetingBlock .itemMeeting .fields .form-group label {
+        margin-bottom: .5rem;
+    }
+
+    .itemsMeetingBlock .itemNum .form-control,
+    .itemsMeetingBlock .itemMeeting .fields .form-control {
+        height: 45px;
+        border: none !important;
+        -webkit-box-shadow: 0px 0px 2px 0px rgb(222,222,222,1);
+        -moz-box-shadow: 0px 0px 2px 0px rgba(222,222,222,1);
+        box-shadow: 0px 0px 2px 0px rgb(222,222,222,1);
+        color: #000;
+        font-size: .8rem;
+    }
+
+    .itemsMeetingBlock .itemNum .inputNumber {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+        .itemsMeetingBlock .itemNum .inputNumber label {
+            width: 5%;
+            color: rgb(30,106,184);
+            font-size: 1.9rem;
+            text-align: center;
+        }
+
+        .itemsMeetingBlock .itemNum .inputNumber input {
+            width: 94%;
+        }
+
+.itemsMeetingBlock .grpBtn {
+    text-align: center;
+}
+
+    .itemsMeetingBlock .grpBtn button {
+        padding: .4rem 3rem !important;
+        margin: 0 .5rem;
+    }
+
+.itemsMeetingBlock .itemNum > button,
+.itemsMeetingBlock button#saveChangeItem {
+    background-color: rgb(30,106,184);
+    color: #fff;
+    display: block;
+    margin: 1rem auto 0;
+    padding: .6rem 3rem !important;
+    min-width: 185px;
+}
+
+.itemsMeetingBlock button#newItem {
+    width: 100%;
+    background-color: #fafaff;
+    padding: 1rem !important;
+    font-family: 'CairoBold';
+    border: 1px solid #dedede;
+    color: rgb(30,106,184);
+}
+
+    .itemsMeetingBlock button#newItem span {
+        background-color: #fff;
+        border: 1px solid #dedede;
+        padding: .1rem .4rem;
+        margin-left: .5rem;
+    }
+
+    .itemsMeetingBlock button#newItem:hover {
+        background-color: #f7f7f7;
+    }
+
+.returnMeetingData .fixedRespon .grayHeading {
+    font-size: .9rem !important;
+}
+
+.attachsBlock {
+    background-color: #fdfdfd;
+}
+
+    .attachsBlock .viewFiles {
+        padding: 1rem;
+        margin: 1rem 0;
+        -webkit-box-shadow: 0px 0px 3px 0px rgb(204 204 204);
+        -moz-box-shadow: 0px 0px 3px 0px rgb(204 204 204);
+        box-shadow: 0px 0px 3px 0px rgb(204 204 204);
+    }
+
+    .attachsBlock > h5 {
+        margin: 1rem 0
+    }
+
+    .attachsBlock .viewFiles .filesBox {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .attachsBlock .viewFiles .fileDetails {
+        width: 73%;
+        margin: 0 auto .5rem;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 4px 0px rgb(204 204 204);
+        -moz-box-shadow: 0px 0px 4px 0px rgba(204,204,204,1);
+        box-shadow: 0px 0px 4px 0px rgb(204 204 204);
+        text-align: center;
+        padding: 3rem 1rem;
+        border-radius: 3px;
+        position: relative;
+    }
+
+        .attachsBlock .viewFiles .fileDetails .deleteAttach {
+            position: absolute;
+            right: -.5rem;
+            top: -.5rem;
+            cursor: pointer;
+        }
+
+        .attachsBlock .viewFiles .fileDetails img {
+            width: 50px;
+            height: 50px;
+        }
+
+    .attachsBlock .viewFiles span {
+        font-family: CairoBold;
+    }
+
+        .attachsBlock .viewFiles span a {
+            color: rgb(30,106,184);
+        }
+
+    .attachsBlock .uploadFiles {
+        border: 1px dashed rgb(30,106,184);
+        border-radius: 5px;
+        width: 70%;
+        padding: 1rem;
+        text-align: center;
+        margin: 2rem auto 0;
+        background-color: #fbfbfe;
+    }
+
+    .attachsBlock .headingFile {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        width: 210px;
+        margin: 1rem auto 1rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+        .attachsBlock .headingFile h5 {
+            margin: 0;
+        }
+
+        .attachsBlock .headingFile span {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border: 1px solid #dedede;
+            margin-left: .5rem;
+            color: rgb(30,106,184);
+        }
+
+    .attachsBlock .uploadFiles input {
+        position: absolute;
+        width: 100%;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .attachsBlock .uploadFiles p {
+        font-family: CairoBold;
+        color: #777;
+        font-size: .8rem;
+    }
+
+/******************* Items review page **********************/
+.itemsReview {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+section.itemsReview .attentionMeeting {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 3px;
+    margin: 1.5rem 0;
+    -webkit-box-shadow: 0px 0px 4px -1px rgb(99 97 97 / 75%);
+    -moz-box-shadow: 0px 0px 4px -1px rgb(99 97 97 / 75%);
+    box-shadow: 0px 0px 4px -1px rgb(99 97 97 / 75%);
+    background-color: transparent;
+}
+
+    section.itemsReview .attentionMeeting h5 {
+        font-family: 'SakkalBold';
+        margin: 1rem 0;
+        color: #045e9e;
+        font-size: 23px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+        section.itemsReview .attentionMeeting h5 i {
+            margin-left: .5rem;
+        }
+
+    section.itemsReview .attentionMeeting p {
+        font-family: 'SakkalRegular';
+        font-size: 17px;
+    }
+
+.itemsReview .itemBlock {
+    margin: 1.5rem 0;
+    background-color: #fdfdfd;
+    padding: 1rem;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 4px -1px rgba(204,204,204,1);
+    -moz-box-shadow: 0px 0px 4px -1px rgba(204,204,204,1);
+    box-shadow: 0px 0px 4px -1px rgba(204,204,204,1);
+    position: relative;
+    overflow: hidden;
+}
+
+    .itemsReview .itemBlock .itemNumber,
+    .itemsReview .itemBlock .headingItem {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .itemsReview .itemBlock .headingItem h5 {
+            color: #045e9e;
+            font-family: 'SakkalBold';
+            margin-bottom: 0;
+            max-width: 66vw;
+            padding: .5rem;
+            font-size: 24px;
+        }
+
+        .itemsReview .itemBlock .headingItem label {
+            color: #045e9e;
+            font-size: 1.9rem;
+            font-family: 'SakkalBold';
+            width: 20px;
+            text-align: center;
+        }
+
+    .itemsReview .itemBlock .eventItem button {
+        display: block;
+        margin-bottom: .5rem;
+        font-family: 'CairoSemiBold';
+        font-size: 0.8rem !important;
+        width: 126px;
+    }
+
+.itemsReview .itemApproved {
+    background-color: #f5fbf7;
+}
+
+    .itemsReview .itemApproved .headingItem h5,
+    .itemsReview .itemApproved .headingItem label {
+        color: #2f6945 !important;
+    }
+
+.itemsReview .itemRejected {
+    background-color: #fefaf9;
+}
+
+    .itemsReview .itemRejected .headingItem h5,
+    .itemsReview .itemRejected .headingItem label {
+        color: #f06245 !important;
+    }
+
+.itemsReview .itemBlock .basicData label {
+    font-family: 'SakkalBold';
+    margin-bottom: .5rem;
+    font-size: 19px;
+}
+
+.itemsReview .itemBlock .editableBlock {
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #f3f3f3;
+    padding: .5rem;
+    font-family: 'SakkalRegular' !important;
+    font-weight: 100 !important;
+}
+
+    .itemsReview .itemBlock .editableBlock ul,
+    .itemsReview .itemBlock .editableBlock ol {
+        margin-bottom: 0;
+        padding-right: 1rem;
+    }
+
+        .itemsReview .itemBlock .editableBlock ul li,
+        .itemsReview .itemBlock .editableBlock ol li {
+            list-style-image: url("/Style Library/EkuityDesign/Images/Icons/bullet.png");
+            margin: .5rem 0;
+        }
+
+    .itemsReview .itemBlock .editableBlock > div {
+        margin: .5rem 0;
+    }
+
+.itemsReview .itemBlock .statusItemBtn {
+    text-align: center;
+    margin: 2rem 0 1rem;
+}
+
+    .itemsReview .itemBlock .statusItemBtn button {
+        padding: .5rem !important;
+        width: 170px;
+        transition: all .3s ease-out;
+        font-family: 'CairoSemiBold';
+        margin: 0 .5rem;
+    }
+
+        .itemsReview .itemBlock .statusItemBtn button#rejectItem {
+            border: 1px solid #ef6148;
+            color: #ef6148;
+        }
+
+            .itemsReview .itemBlock .statusItemBtn button#rejectItem:hover,
+            .itemsMeetingBlock .itemMeeting .fields .eventItem button#deleteItem:hover {
+                background-color: #ef6148;
+                color: #fff;
+            }
+
+        .itemsReview .itemBlock .statusItemBtn button#approveItem {
+            border: 1px solid rgb(30,106,184);
+            color: rgb(30,106,184);
+        }
+
+            .itemsReview .itemBlock .statusItemBtn button#approveItem:hover,
+            .itemsMeetingBlock .itemMeeting .fields .eventItem button#editItem:hover {
+                background-color: rgb(30,106,184);
+                color: #fff;
+            }
+
+.itemsReview .itemBlock .opacityComment,
+.itemsReview .itemBlock .opacityReject {
+    position: absolute;
+    background-color: rgb(189 188 188 / 50%);
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1rem;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.itemsReview .itemBlock .opacityReject {
+    padding: 3rem 1rem;
+}
+
+    .itemsReview .itemBlock .opacityComment .commentBlock,
+    .itemsReview .itemBlock .opacityReject .commentBlock {
+        background-color: #fdfdfd;
+        padding: 1rem 2rem 1rem 1rem;
+        border-radius: 3px;
+        height: 100%;
+        position: relative;
+    }
+
+    .itemsReview .itemBlock .opacityComment .CloseComment,
+    .itemsReview .itemBlock .opacityReject .CloseComment {
+        position: absolute;
+        left: 1rem;
+        color: #5a5a5a;
+        top: 2.8rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    .itemsReview .itemBlock .opacityComment h5,
+    .itemsReview .itemBlock .opacityReject h5 {
+        color: rgb(30,106,184);
+        font-family: CairoBold;
+        margin-top: 1rem;
+        margin-bottom: 1.3rem;
+    }
+
+    .itemsReview .itemBlock .opacityReject h5 {
+        color: #ef6148;
+    }
+
+.itemsReview .itemBlock .saveItemBtn {
+    text-align: center;
+}
+
+    .itemsReview .itemBlock .saveItemBtn button {
+        border: 1px solid rgb(30,106,184);
+        padding: .5rem !important;
+        color: rgb(30,106,184);
+        width: 170px;
+        transition: all .3s ease-out;
+        font-family: 'CairoSemiBold';
+    }
+
+.itemsReview .itemBlock .opacityComment h5 i,
+.itemsReview .itemBlock .opacityReject h5 i {
+    margin-left: .5rem;
+}
+
+.itemsReview .itemBlock .opacityComment .formComment,
+.itemsReview .itemBlock .opacityReject .formComment {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+    .itemsReview .itemBlock .opacityComment .formComment textarea {
+        height: 162px;
+        width: 68vw;
+        border: 1px solid #f3f3f3 !important;
+    }
+
+    .itemsReview .itemBlock .opacityReject .formComment textarea {
+        height: 160px;
+        width: 65vw;
+        border: 1px solid #f3f3f3 !important;
+    }
+
+    .itemsReview .itemBlock .opacityComment .formComment button,
+    .itemsReview .itemBlock .opacityReject .formComment button {
+        border: 1px solid rgb(30,106,184);
+        font-family: 'CairoBold';
+        margin-bottom: 0 !important;
+        background-color: #fff;
+    }
+
+.itemsReview .changeStatusBtn button {
+    background-color: rgb(30,106,184);
+    padding: .5rem 4rem !important;
+    font-family: 'CairoBold';
+    border: 1px solid rgb(30,106,184);
+    color: #fff;
+    display: block;
+    margin: 1rem auto;
+}
+
+.itemsReview .itemBlock .rejectionBlock,
+.itemsReview .itemBlock .ApprovedBlock {
+    font-family: CairoRegular
+}
+
+    .itemsReview .itemBlock .rejectionBlock p {
+        color: #f06245;
+        margin: 1rem 0;
+    }
+
+        .itemsReview .itemBlock .rejectionBlock p i,
+        .itemsReview .itemBlock .ApprovedBlock p i {
+            margin-left: .5rem;
+        }
+
+    .itemsReview .itemBlock .rejectionBlock span,
+    .itemsReview .itemBlock .ApprovedBlock span {
+        color: #000;
+    }
+
+    .itemsReview .itemBlock .ApprovedBlock p {
+        color: #2f6945;
+    }
+
+
+/***************** report before meeting page *********************/
+
+.itemsReview .headingPdf {
+    display: flex;
+    justify-content: space-between;
+}
+
+    .itemsReview .headingPdf h3 {
+        margin: 0;
+        font-family: 'SakkalBold';
+        font-size: 22px;
+    }
+
+.beforeMeeting .opacityComment .CloseComment,
+.AfterMeeting .opacityComment .CloseComment {
+    left: 2rem !important;
+    z-index: 8;
+}
+
+.beforeMeeting .commentItem:not(:last-child),
+.AfterMeeting .commentItem:not(:last-child) {
+    border-bottom: 1px solid #dedede;
+}
+
+.beforeMeeting .commentItem,
+.AfterMeeting .commentItem {
+    margin: 2rem 0rem 1rem 2rem;
+    position: relative;
+}
+
+    .beforeMeeting .commentItem #deleteCommentItem,
+    .AfterMeeting .commentItem #deleteCommentItem {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+    }
+
+.beforeMeeting .opacityComment h5,
+.AfterMeeting .opacityComment h5 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1.3rem !important;
+    font-size: 1.1rem;
+}
+
+.beforeMeeting .opacityComment .commentItem h5 span,
+.AfterMeeting .opacityComment .commentItem h5 span {
+    color: #000;
+    margin-right: .5rem;
+}
+
+.beforeMeeting .opacityComment .commentBlock,
+.AfterMeeting .opacityComment .commentBlock {
+    overflow-y: auto;
+}
+
+    .beforeMeeting .opacityComment .commentBlock::-webkit-scrollbar,
+    .AfterMeeting .opacityComment .commentBlock::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    .beforeMeeting .opacityComment .commentBlock::-webkit-scrollbar-track,
+    .AfterMeeting .opacityComment .commentBlock::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    .beforeMeeting .opacityComment .commentBlock::-webkit-scrollbar-thumb,
+    .AfterMeeting .opacityComment .commentBlock::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+        .beforeMeeting .opacityComment .commentBlock::-webkit-scrollbar-thumb:hover,
+        .AfterMeeting .opacityComment .commentBlock::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+/********************* report after meeting page ************************/
+
+.AfterMeeting .itemBlock .statusItemBtn button#approveItem {
+    color: #2f6945;
+    border: 1px solid #2f6945;
+}
+
+    .AfterMeeting .itemBlock .statusItemBtn button#approveItem:hover {
+        background-color: #2f6945;
+        color: #fff;
+    }
+
+.AfterMeeting .opacityStatus {
+    position: absolute;
+    background-color: rgb(189 188 188 / 50%);
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    top: 0;
+    right: 0;
+    display: none;
+    z-index: 3;
+}
+
+.FileFieldContainer {
+    margin: 1rem 0;
+    border: 1px dashed #bfbfbf;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+}
+
+    /*.UploadedImage {
+    font-size: x-small;
+}*/
+
+    .FileFieldContainer label {
+        margin: 0;
+        padding: 5px 1em;
+        text-align: right;
+        position: absolute !important;
+        z-index: 1;
+        background-color: #efefef;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+        .FileFieldContainer label i {
+            margin-left: .5rem;
+        }
+
+    .FileFieldContainer input {
+        background: #fbfbfb;
+        height: auto;
+        padding: 0.54rem 0.75rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 0;
+        background-color: #fff;
+        font-size: 14.5px;
+        font-family: 'TheSansRegular';
+    }
+
+.AfterMeeting .contentStatus {
+    width: 80%;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    background-color: #fdfdfd;
+    margin: auto;
+    font-family: 'CairoBold';
+    height: 100%;
+    position: relative;
+}
+
+    .AfterMeeting .contentStatus > i.fa-times-circle {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        color: #555;
+        cursor: pointer;
+    }
+
+    .AfterMeeting .contentStatus .agreeItem {
+        color: #2f6945;
+    }
+
+        .AfterMeeting .contentStatus .agreeItem h5 {
+            margin: .5rem 0 1rem;
+            font-family: CairoBold;
+        }
+
+    .AfterMeeting .contentStatus h6 {
+        font-family: CairoBold;
+        margin-top: 1rem;
+    }
+
+    .AfterMeeting .contentStatus .formComment {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+        .AfterMeeting .contentStatus .formComment textarea {
+            height: 110px;
+            width: 83%;
+        }
+
+        .AfterMeeting .contentStatus .formComment button {
+            border: 2px solid rgb(30,106,184);
+            margin-bottom: 0 !important;
+            background-color: #fff;
+            color: rgb(30,106,184);
+            width: 12%;
+        }
+
+.AfterMeeting .rejectionStatus {
+    color: #ef6148;
+    font-family: 'CairoSemiBold'
+}
+
+.AfterMeeting .approvalStatus {
+    color: #2f6945;
+    font-family: 'CairoSemiBold'
+}
+
+    .AfterMeeting .rejectionStatus p:last-child,
+    .AfterMeeting .approvalStatus p:last-child {
+        color: #777;
+    }
+
+    .AfterMeeting .rejectionStatus p i,
+    .AfterMeeting .approvalStatus p i {
+        padding-left: 5px
+    }
+
+.returnRespon {
+    margin-bottom: 11px;
+}
+
+.AfterMeeting .returnRespon .attend {
+    width: 90%;
+    margin: 1rem auto;
+    padding: .4rem 0rem;
+}
+
+    .AfterMeeting .returnRespon .attend:not(:last-child) {
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+/********** calendar  ***************/
+.fc-toolbar-chunk > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.fc-toolbar-chunk h2 {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #5ea8dc;
+    border: 1px solid #f5f5f5;
+    font-family: 'CairoSemiBold';
+    font-size: 1.4rem !important;
+}
+
+.fc-toolbar-chunk button {
+    min-width: 50px !important;
+}
+
+    .fc-toolbar-chunk button span {
+        color: #5ea8dc;
+    }
+
+.fc .fc-button:not(:disabled),
+.fc a[data-navlink],
+.fc-event.fc-event-draggable,
+.fc-event[href] {
+    background-color: #f5f5f5;
+    border: 1px solid #f5f5f5;
+    border-radius: 0;
+    max-width: 25px !important;
+    padding: .3rem 0;
+}
+
+th .fc-scrollgrid-sync-inner {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    color: #5ea8dc;
+    font-family: 'CairoRegular';
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background-color: #f5f5f5 !important;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+    border: none !important;
+    -webkit-box-shadow: 0px 0px 7px -2px rgb(222 222 222);
+    -moz-box-shadow: 0px 0px 7px -2px rgb(222 222 222);
+    box-shadow: 0px 0px 7px -2px rgb(222 222 222);
+}
+
+.fc .fc-button-primary:hover {
+    background-color: #f5f5f5 !important;
+    border: 1px solid #f5f5f5 !important;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border: none !important;
+    -webkit-box-shadow: 0px 0px 3px -2px rgb(142 142 142);
+    -moz-box-shadow: 0px 0px 3px -2px rgb(142 142 142);
+    box-shadow: 0px 0px 3px -2px rgb(142 142 142);
+}
+
+.fc .fc-button-primary:focus,
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus,
+.fc .fc-button-primary:not(:disabled):active:focus {
+    box-shadow: none !important;
+}
+
+.timeline tbody tr:hover {
+    background-color: transparent;
+}
+
+
+/************ BOD Responsive ***************/
+
+@media (max-width:767px) {
+    .Dashboard {
+        padding: 2rem 1rem;
+    }
+
+    .attentionMeeting textarea {
+        max-width: 100%;
+    }
+
+    .attachsBlock .uploadFiles {
+        width: 100%;
+    }
+
+    .returnMeetingData .viewRespons,
+    .returnMeetingData .viewAttend {
+        border-right: none !important;
+        margin-top: 1rem;
+    }
+
+    .blockLinks a {
+        font-size: .9rem;
+    }
+
+    th .fc-scrollgrid-sync-inner {
+        font-size: .8em;
+    }
+
+    .fc .fc-daygrid-day-top {
+        font-size: .9rem;
+    }
+
+    .fc .fc-daygrid-more-link {
+        font-size: .5rem;
+    }
+
+    .fc-toolbar-chunk h2 {
+        width: 150px;
+        font-size: 1.2rem;
+    }
+
+    .itemsReview .itemBlock .headingItem label {
+        width: auto !important;
+        font-size: 1.1rem;
+    }
+
+    .itemsReview .itemBlock .statusItemBtn button {
+        width: 145px;
+    }
+
+    .itemsReview .itemBlock .eventItem button {
+        font-size: .8rem !important;
+    }
+
+    .assignResponsible #addEmployee,
+    .assignResponsible #addExternalEmployee,
+    .modalExternalEmployee #newExternal,
+    .modalEmployee .row button {
+        font-size: .7rem !important;
+    }
+
+        .assignResponsible #addEmployee i,
+        .assignResponsible #addExternalEmployee i {
+            font-size: 2rem;
+        }
+
+    .AfterMeeting .inputForm,
+    .meetingDetail .detailsInput {
+        margin-bottom: 2rem;
+    }
+}
+
+.screenShow {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(10 10 10 / 84%);
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+    .screenShow i {
+        position: absolute;
+        right: 1rem;
+        top: 2rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .screenShow video {
+        max-width: 960px;
+    }
+
+.videoDes .videoBlock,
+.imgDes .imgBlock {
+    -webkit-box-shadow: 0px 0px 4px -2px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 0px 0px 4px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 4px -2px rgb(0 0 0 / 75%);
+}
+
+    .videoDes .videoBlock video {
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .videoDes .videoBlock .videoIcon {
+        position: relative;
+        height: 234px;
+        overflow: hidden;
+    }
+
+        .videoDes .videoBlock .videoIcon i {
+            color: #fff;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+    .videoDes .videoBlock .opacityIcon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.75);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        z-index: 2;
+        height: 100%;
+    }
+
+    .videoDes .videoBlock span,
+    .imgDes .imgBlock span {
+        display: flex;
+        font-family: 'CairoRegular';
+        margin-bottom: 2rem;
+        margin-top: .3rem;
+        color: #444;
+        padding: 1rem;
+        font-size: .9rem;
+    }
+
+
+.imgDes img {
+    max-width: 100%;
+}
+
+.viewItemAttach a {
+    color: #444;
+}
+
+.viewItemAttach img {
+    width: 25px;
+    margin-left: .2rem;
+}
+
+.generalCommentBlock li {
+    list-style-image: url("/Style Library/EkuityDesign/Images/Icons/bullet.png");
+}
+
+.generalCommentBlock div {
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.generalCommentBlock h5,
+.generalCommentBlock h6 {
+    font-family: 'SakkalBold';
+}
+
+.generalCommentBlock p {
+    font-size: 17px;
+}

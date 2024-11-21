@@ -1,0 +1,1641 @@
+﻿/************************* Import Font Files ********************/
+
+@font-face {
+    font-family: CairoRegular;
+    src: url('../Fonts/Cairo/Cairo-Regular.ttf');
+}
+
+@font-face {
+    font-family: CairoSemiBold;
+    src: url('../Fonts/Cairo/Cairo-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: CairoBold;
+    src: url('../Fonts/Cairo/Cairo-Bold.ttf');
+}
+
+
+/************************* Generic Style **************************/
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.modal-header {
+    padding: 1rem 2rem !important;
+    background-color: #0075C8 !important;
+}
+
+.modal-header .close:hover {
+    color: #fff !important;
+}
+
+.modal-header h3 {
+    color: #fff;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.modal-body {
+    padding: 2rem 2rem !important;
+    direction: ltr;
+    text-align: left;
+}
+
+.modal-body p {
+    margin: 3px 0;
+    font-family: CairoSemiBold;
+}
+
+.modal-body .table {
+    border: none;
+}
+
+.modal-body .table input[type=checkbox] {
+    cursor: pointer;
+}
+
+.modal-body .table thead {
+    background: #c6c6c6;
+    color: #212529;
+    font-family: CairoSemiBold;
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.modal-body .btn.btn-primary {
+    color: #fff !important;
+    margin-top: 1rem;
+}
+
+.modal-body .table tr td {
+    border-color: #d8d8d8;
+}
+
+.modal-body .table tr td:first-child {
+    width: 20px;
+}
+
+.edit-icon {
+    background: #bbbbbb;
+    border-radius: 50%;
+    width: 2.3rem;
+    height: 2.3rem;
+    transition: all .3s;
+}
+
+.edit-icon a {
+    color: #fff;
+    font-size: 15px;
+    position: relative;
+    left: 1px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-icon:hover {
+    background: #0075cb;
+}
+
+p.loginError {
+    text-align: left;
+}
+
+.ms-error {
+    color: #F44336;
+    font-weight: 500;
+}
+
+span.userName {
+    padding: 0 8px;
+}
+
+table#tblPermission {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+#aspnetForm .ms-rtestate-write {
+    max-height: 70vh !important;
+    overflow-y: auto !important;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9000;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#s4-bodyContainer {
+    padding-bottom: 0;
+    min-height: 100%;
+    position: relative;
+    display: flex;
+}
+
+li.ms-linksection-listItem {
+    line-height: 32px;
+}
+
+.btn.btn-primary {
+    background-color: #0075C8;
+    border-color: #0075C8;
+    color: #fff !important;
+}
+
+.btn.btn-primary:hover {
+    background-color: #0269b3;
+    border-color: #0269b3;
+}
+
+.container-fluid {
+    padding: 0;
+    background: #F5F5F5;
+    background-image: url(../Images/Header_BG.png);
+    background-size: 100% 18vw;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 10vh;
+}
+
+.h3,
+h3 {
+    font-size: 1.3rem;
+    font-family: 'CairoBold' !important;
+    line-height: 40px;
+}
+
+.ms-dlgCloseBtn>span {
+    box-sizing: content-box;
+}
+
+.ms-storefront-searchbox {
+    box-sizing: content-box;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+}
+
+input.ms-InlineSearch-SearchBox-Baseline.ms-InlineSearch-SearchBox-Baseline {
+    width: 290px;
+}
+
+#idStorefrontLayoutRoot .ms-webpart-titleText.ms-webpart-titleText {
+    font-family: 'CairoSemiBold';
+    margin-bottom: 1rem;
+}
+
+.o365cs-base .ms-fcl-b {
+    font-family: 'CairoSemiBold';
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+.ContentPlaceHolder {
+    margin: 3vw 10%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .15);
+    margin-bottom: 1rem;
+    width: 80% !important;
+    border: 3rem solid #fff;
+    padding: 0;
+}
+
+#pageTitle {
+    display: none;
+}
+
+
+/* .ms-error{
+	display: none;
+} */
+
+
+/************************* Login Page Style *********************/
+
+html[lang="Ar"] header,
+html[lang="Ar"] .main-container,
+html[lang="Ar"] footer {
+    direction: rtl;
+    text-align: right !important;
+    font-family: CairoRegular, sans-serif, Arial;
+}
+
+#login-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../Images/Login_BG.png');
+    background-size: cover;
+    padding: 15px;
+    padding-bottom: 2rem;
+}
+
+#form-container {
+    height: 100%;
+}
+
+#login-container div#logo-container {
+    width: 50%;
+    overflow: hidden;
+    margin: 0 auto 6vh auto;
+}
+
+#login-container div#logo-container img {
+    width: 100%;
+}
+
+#form-container input {
+    background: rgba(255, 255, 255, .1);
+    border: none !important;
+    border-radius: 3px;
+    color: #fff;
+    padding: 1.7rem 1rem !important;
+}
+
+#form-container .form-group {
+    margin-bottom: 2rem;
+}
+
+#login-container ::-webkit-input-placeholder {
+    color: #fff;
+    font-family: CairoSemiBold;
+}
+
+#login-container :-ms-input-placeholder {
+    color: #fff;
+    font-family: CairoSemiBold;
+}
+
+#login-container ::placeholder {
+    color: #fff;
+    font-family: CairoSemiBold;
+}
+
+#form-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+#form-links a {
+    color: #fff;
+}
+
+#login-container .form-check-label {
+    padding: 0 2rem;
+    position: relative;
+}
+
+#login-container .btn.btn-primary {
+    padding: 1rem 3rem !important;
+    box-shadow: 1px 1px 5px rgba(0, 117, 200, .7);
+    background-color: #0075C8;
+    border-color: #0075C8 !important;
+    font-size: 16px;
+}
+
+
+/**************************************** Remember Me Checkbox Style *******************************/
+
+#form-links label {
+    cursor: pointer;
+}
+
+#form-links label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: all 0.3s;
+}
+
+#form-links label:hover .checkmark {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+#form-links label.checked .checkmark:after {
+    display: block;
+}
+
+#form-links label .checkmark:after {
+    left: 6px;
+    top: 1px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/************************************** Footer Style *******************************/
+
+footer {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+footer.dark-mode {
+    background: #1A1919;
+    position: absolute;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    bottom: 0;
+}
+
+footer svg {
+    background: #fff;
+    font-size: 16px !important;
+    padding: 2px;
+    border-radius: 50%;
+    color: #0075C8;
+    margin: 0 5px;
+}
+
+
+/****************************************** Home Style ****************************/
+
+header {
+    margin-bottom: 2vh;
+}
+
+
+/*********** Navigation Style **********/
+
+.navbar-brand {
+    /* width: 12%; */
+    overflow: hidden;
+    margin: 0;
+}
+
+nav.navbar {
+    padding: 0;
+    /* height: 5vh; */
+}
+
+#navbarNav {
+    height: 100%;
+}
+
+.navigation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    padding: .8rem 10%;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+}
+
+ul.nav {
+    display: flex;
+    /* align-items: center; */
+    padding: 0 5rem;
+    height: 100%;
+    position: relative;
+}
+
+ul.nav>li {
+    margin: 0 5px;
+    font-size: 15px;
+}
+
+ul.nav .icon {
+    width: 15px;
+}
+
+ul.nav>li>a {
+    color: #fff;
+    padding: 10px 1rem;
+    transition: all .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+ul.nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    text-align: right;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    z-index: 1;
+    padding: 0;
+    border-top: 5px solid transparent;
+    border-left: 3px solid transparent;
+}
+
+ul.nav ul ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 101%;
+    width: max-content;
+    border-top: none;
+    box-shadow: -3px -3px 10px rgba(0, 0, 0, .2);
+    border-right: none;
+}
+
+ul.nav ul li {
+    list-style-type: none;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 0 .8rem 0;
+}
+
+ul.nav ul li a {
+    color: #4D4D4C;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem 0 3rem;
+    border-right: 5px solid transparent;
+    font-family: CairoSemiBold;
+    font-size: 15px;
+}
+
+ul.nav ul li svg {
+    width: 7px !important;
+    margin-left: 10px;
+    color: #4D4D4C;
+}
+
+ul.nav ul li:hover>a {
+    border-right: 5px solid #0075c8;
+    text-decoration: none;
+    color: #0075c8;
+}
+
+ul.nav ul li:hover svg {
+    color: #0075c8;
+}
+
+ul.nav ul li:hover>ul {
+    display: block;
+}
+
+ul.nav>li:hover>ul {
+    display: block;
+}
+
+ul.nav>li:hover>a,
+ul.nav>li>a.active {
+    text-decoration: none;
+    background: rgba(255, 255, 255, .15);
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .05);
+}
+
+#breadCrumbs-container {
+    padding: 1% 15px;
+    color: #fff;
+}
+
+#breadCrumbs-container h1.title {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+    font-family: CairoBold;
+    color: #fff;
+}
+
+#breadCrumbs-container .breadCrumbs {
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'CairoRegular';
+    font-size: 15px;
+}
+
+#breadCrumbs-container .breadCrumbs img.icon {
+    width: 15px;
+    margin-left: 5px;
+    position: relative;
+    top: -4px;
+}
+
+.breadCrumbs .seperator {
+    width: 8px;
+    height: 8px;
+    background: #0075c8;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.breadCrumbs a {
+    color: #fff;
+    font-family: CairoSemiBold;
+    font-size: 15px;
+}
+
+.main-container {
+    /* min-height: 48vh; */
+    position: relative;
+}
+
+#blocks-container {
+    /* margin: 0px 5%; */
+    padding: 0;
+    align-items: flex-start;
+}
+
+#blocks-container .block {
+    background: #fff;
+    min-height: 250px;
+    text-align: right;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .15);
+    margin-bottom: 1rem;
+}
+
+#blocks-container .block.small-block {
+    margin-top: 4rem;
+    position: relative;
+}
+
+#blocks-container .block.small-block:before {
+    content: url('../Images/Icons/Arrow.png');
+    position: absolute;
+    right: -32px;
+    top: 1.5rem;
+}
+
+#blocks-container .block .block-header {
+    padding: 0px 2rem 0 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.5rem;
+}
+
+.block .block-header h1 {
+    font-size: 1.2em;
+    font-family: CairoBold;
+    margin: 0;
+    color: #0075C8;
+}
+
+.block-content {
+    padding: 1rem 2rem;
+}
+
+#useful-links {
+    padding: 0;
+}
+
+ul#useful-links li {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 1rem 0;
+    list-style-image: url('../Images/Icons/Right_Arrow.png');
+    position: relative;
+    right: 5%;
+    width: 95%;
+}
+
+ul#useful-links li:last-child {
+    border-bottom: none;
+}
+
+ul#useful-links li>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul#useful-links li a {
+    font-family: CairoBold;
+    color: #4D4D4C;
+    position: relative;
+    top: -3px;
+}
+
+.link-image img {
+    width: 5rem;
+}
+
+.months-tab,
+.years-tab {
+    display: flex;
+}
+
+.months-tab .month {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 1rem;
+    margin: 0 5px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.months-tab .month span:first-child {
+    font-size: 14px;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+.months-tab .month:hover,
+.months-tab .month.active {
+    background: rgba(0, 117, 200, .1);
+    border-radius: 5px;
+    color: #0075C8;
+}
+
+.years-tab .year {
+    margin: 0 1.5rem;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #0075C8;
+    cursor: default;
+}
+
+.noEvents {
+    display: none;
+}
+
+.noEvents p {
+    font-size: 17px;
+    margin: 2rem 0;
+    color: #707070;
+    font-family: CairoSemiBold;
+    text-align: center;
+}
+
+#events-list {
+    padding: 0;
+    display: none;
+}
+
+#events-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 1rem 0;
+}
+
+#events-list li:last-child {
+    border-bottom: none;
+}
+
+#events-list li .event-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#events-list li .event-details .event-image {
+    width: 4vw;
+    height: 4vw;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-left: 1rem;
+}
+
+.event-details .event-image img {
+    min-width: 100%;
+}
+
+#events-list li .event-details h1 {
+    font-size: 18px;
+    font-family: CairoBold;
+    color: #4D4D4C;
+    margin-bottom: .6rem;
+}
+
+#events-list li .event-details p {
+    font-size: 14px;
+    margin: 0;
+    color: #707070;
+}
+
+#events-list .icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #707070;
+}
+
+#events-list .icon-container>div {
+    background: rgba(0, 117, 200, .1);
+    padding: 8px 10px;
+    border-radius: 3px;
+    margin-bottom: .6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#events-list .icon-container>div img {
+    width: 14px;
+}
+
+#events-list .icon-container p {
+    direction: ltr;
+    margin: 0;
+}
+
+a.location-link {
+    background: rgba(0, 117, 200, .1);
+    border-radius: 5px;
+    color: #0075C8;
+    padding: .5rem 1rem;
+    float: left;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+
+a.location-link:hover {
+    text-decoration: none;
+    background: rgba(0, 117, 200, .2);
+}
+
+a.location-link svg {
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+#news-container,
+#documents-container {
+    margin-top: 2rem;
+}
+
+#news-container .block {
+    margin-bottom: 2rem;
+    position: relative;
+    cursor: default;
+}
+
+#news-container .news-image {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    border-radius: 0 0 0 40%;
+}
+
+#news-container .news-image img {
+    width: 110%;
+    min-height: 100%;
+}
+
+#news-container .mews-date {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #fff;
+    padding: 3px 10px;
+    border-radius: 3px;
+    color: #0075c8;
+    font-weight: bold;
+    font-size: 14px;
+    direction: ltr;
+}
+
+.news-details {
+    padding: 2rem;
+}
+
+.news-details h1 {
+    font-size: 18px;
+    color: #0075c8;
+    margin-bottom: 1rem;
+    font-family: 'CairoBold';
+    line-height: 32px;
+}
+
+.news-details p {
+    margin: 0;
+    font-size: 16px;
+    color: #4D4D4C;
+    font-family: CairoSemiBold;
+    display: block;
+    line-height: 32px;
+    max-height: 160px;
+}
+
+.news-details a {
+    color: #0075c8;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'CairoSemiBold';
+}
+
+.news-details a svg {
+    width: 8px !important;
+    margin: 0px 6px;
+    top: 1px;
+    position: relative;
+}
+
+#documents-links {
+    padding: 0;
+}
+
+#documents-links li {
+    list-style-type: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+}
+
+#documents-links li:nth-child(odd) {
+    background: rgba(0, 117, 200, .03);
+}
+
+#documents-links li .document-details {
+    display: flex;
+}
+
+.document-details .icon-image img {
+    width: 2.5rem;
+    margin-left: 20px;
+}
+
+.document-details p {
+    margin: 0;
+    direction: ltr;
+    font-size: 14px;
+    font-family: CairoSemiBold;
+    color: #0075c8;
+}
+
+.document-details a {
+    color: #4D4D4C;
+    font-family: CairoSemiBold;
+    font-size: 15px;
+}
+
+.document-details hr {
+    margin: .7rem 0 .3rem 0;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    width: 60%;
+}
+
+#lang-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#lang-container #lang {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#lang-container #lang:hover {
+    background: rgba(255, 255, 255, .3);
+}
+
+#lang-container #seperator {
+    color: rgba(255, 255, 255, .3);
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+#lang-container #myAccount {
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.user-actions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    border-top: 10px solid transparent;
+    overflow: hidden;
+    display: none;
+}
+
+.user-actions ul {
+    padding: 1rem 1rem 1rem 3rem;
+    margin: 0;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.user-actions ul li {
+    list-style-type: none;
+    padding: .4rem 0;
+}
+
+.user-actions ul li a {
+    padding: 0;
+    color: #0075d3;
+    font-family: CairoSemiBold;
+}
+
+#side-menu ul {
+    padding: 0;
+}
+
+#side-menu>ul>li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    cursor: pointer;
+    position: relative;
+}
+
+#side-menu>ul>li>.icon {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    background: rgba(180, 181, 180, .2);
+    border-radius: 3px;
+    margin-left: 1rem;
+    transition: all .3s;
+}
+
+#side-menu>ul>li>.icon>svg,
+#side-menu>ul>li>.icon>svg {
+    color: #4D4D4C;
+}
+
+#side-menu>ul>li>span,
+#side-menu>ul>li>span a {
+    color: #4D4D4C;
+    font-family: CairoBold;
+    font-size: 14px;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+#side-menu>ul>li:hover>span a,
+#side-menu>ul>li:hover>span,
+#side-menu>ul>li.active>span,
+#side-menu>ul>li.active>span a {
+    text-decoration: none;
+    color: #0075c8;
+}
+
+#side-menu>ul>li:hover>.icon,
+#side-menu>ul>li.active>.icon {
+    background: rgba(0, 117, 200, .1);
+}
+
+#side-menu>ul>li:hover>.icon>svg,
+#side-menu>ul>li.active>.icon>svg {
+    color: #0075c8;
+}
+
+#side-menu ul li>svg {
+    position: absolute;
+    left: 1.3rem;
+    top: 1.9rem;
+    color: #4D4D4C;
+    font-size: 12px !important;
+}
+
+#side-menu ul ul {
+    display: none;
+    width: 100%;
+}
+
+#side-menu ul ul li {
+    list-style-type: disc;
+    color: #E6E6E6;
+    margin: 5px 4rem 5px 0;
+}
+
+#side-menu ul ul li a {
+    color: #4D4D4C;
+    font-family: CairoSemiBold;
+    font-size: 15px;
+    width: 100%;
+    display: block;
+    padding: .6rem 0;
+}
+
+#side-menu ul ul li a:hover,
+#side-menu ul ul li.active a {
+    color: #0075c8;
+    text-decoration: none;
+}
+
+#side-menu ul.ViewBlock {
+    display: block;
+}
+
+
+/********************************** Table with thead Style *******************************/
+
+.dash-table td,
+.dash-table th,
+.tableReverse td,
+.tableReverse th {
+    border: none;
+}
+
+.dash-table thead th,
+.tableReverse tr th {
+    color: #0075C8;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .08);
+}
+
+.dash-table tbody th,
+.dash-table tbody td,
+.tableReverse td {
+    font-weight: normal;
+    font-family: 'CairoSemiBold';
+    color: #4D4D4C;
+    padding: 1.5rem 2rem;
+    line-height: 30px;
+}
+
+.dash-table tbody td {
+    padding: 1.2em 1em;
+}
+
+.tableReverse td:first-child {
+    padding: 1.5rem 3rem;
+}
+
+.dash-table tbody th::before,
+.tableReverse td:first-child::before {
+    content: url('../Images/Icons/Right_Arrow.png');
+    position: relative;
+    left: .5rem;
+    top: 2px;
+}
+
+.dash-table tbody tr,
+.tableReverse tr {
+    background-image: url('../Images/dashedLine.png');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 95% 2px;
+}
+
+.dash-table tbody tr:last-child,
+.tableReverse tr:last-child,
+.tableReverse tr:first-child {
+    background-image: none;
+}
+
+
+/********************************** Table without thead Style *******************************/
+
+.without-header tbody th,
+.without-header tbody td {
+    padding: 1.2em 1em;
+}
+
+.without-header tbody td {
+    padding: 1.2em 1em;
+}
+
+.without-header tbody tr {
+    background-size: auto 2px;
+}
+
+
+/********************************** Table custome text Style *******************************/
+
+.dash-table tbody td.red {
+    color: #E24C3F;
+}
+
+.dash-table .black {
+    color: #4D4D4C;
+    margin: 0 5px;
+}
+
+.dash-table tbody td .currency {
+    color: #0075C8;
+    margin: 0 5px;
+    font-family: 'CairoSemiBold'
+}
+
+.dash-table tbody tr.group-header {
+    background-image: none;
+}
+
+.dash-table tbody tr.group-header td span {
+    background: rgba(180, 181, 180, .2);
+    color: #0075C8;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-family: 'CairoBold';
+    font-size: 14px;
+}
+
+
+/************************************** List Style *************************/
+
+ul.styledList,
+.SWOT-block ul {
+    padding: 1rem 2rem;
+    color: #4D4D4C;
+}
+
+ul.styledList li,
+.SWOT-block ul li {
+    list-style-type: none;
+    margin-bottom: .5rem;
+    line-height: 32px;
+    list-style-position: initial;
+    position: relative;
+}
+
+ul.styledList>li::before,
+.SWOT-block ul li::before {
+    content: url('../Images/Icons/Right_Arrow.png');
+    position: absolute;
+    top: 3px;
+    right: -20px;
+    height: 100%;
+}
+
+ul.styledList ul,
+.SWOT-block ul {
+    padding: 1rem 3rem 0 0;
+}
+
+ul.styledList ul li::before,
+.SWOT-block ul ul li::before {
+    content: "●";
+    color: #cecece;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-right: -1em;
+}
+
+.SWOT-block .block-content ul {
+    padding: 0 1rem 0 0;
+}
+
+
+/******************************** Company Info Style **************************/
+
+#company-info {
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+#company-info .description {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+}
+
+#company-info .description h1 {
+    font-size: 1.3em;
+    font-family: CairoBold;
+    margin: 0;
+    color: #0075C8;
+    margin-bottom: .5rem;
+}
+
+#company-info .description p {
+    line-height: 1.8rem;
+    margin: 0;
+    color: #4D4D4C;
+    font-family: 'CairoSemiBold';
+}
+
+#company-info .description .logo-container {
+    width: 20%;
+    background: #F5F5F5;
+    padding: .1rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.description .logo-container img {
+    width: 90%;
+    max-height: 95%;
+}
+
+#company-info .info-blocks {
+    display: flex;
+}
+
+#company-info .info-blocks>div {
+    text-align: center;
+    background-image: url('../Images/VerticalLine.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 1px;
+}
+
+#company-info .info-blocks>div:last-child {
+    background-image: url('../Images/VerticalLine.png'), url('../Images/VerticalLine.png');
+    background-repeat: no-repeat;
+    background-position: right center, left center;
+    background-size: 1px;
+}
+
+#company-info .info-blocks b {
+    color: #0075C8;
+    font-size: 14px;
+    font-family: 'CairoBold';
+    line-height: 36px;
+}
+
+#company-info .info-blocks p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 26px;
+    color: #4D4D4C;
+    font-family: 'CairoSemiBold';
+}
+
+
+/************************** Documents Style ***************************/
+
+.document-container {
+    margin-bottom: 1rem;
+}
+
+.document-container #myTab {
+    padding: 0;
+    border: none;
+}
+
+.document-container #myTab li {
+    margin: 0 !important;
+}
+
+.document-container #myTab li a {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 1.1rem 2rem;
+    background: #f5f5f5;
+    color: #cac8c8;
+}
+
+.document-container #myTab li a.active {
+    background: #fff;
+    color: #0075C8;
+    font-family: 'CairoBold';
+}
+
+.document-container #myTab li:first-child a {
+    border-radius: 0 5px 0 0;
+}
+
+.document-container #myTab li:last-child a {
+    border-radius: 5px 0 0 0;
+}
+
+.document-container #myTabContent {
+    background: #fff;
+    text-align: right;
+    border-radius: 5px 0 5px 5px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .15);
+    padding: 2rem 2rem 6rem 2rem;
+    position: relative;
+}
+
+.documents-blocks .doc-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px dashed #C9C9C9;
+}
+
+.documents-blocks .doc-block:last-child {
+    border: none;
+}
+
+.documents-blocks .doc-block img {
+    width: 30px;
+    margin-left: 15px;
+}
+
+.documents-blocks .doc-block h1 {
+    font-family: 'CairoSemiBold';
+    font-size: 16px;
+    margin: 0;
+    color: #4D4D4C;
+}
+
+
+/****************************** LightBox Style ***************************/
+
+#lightgallery {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: wrap;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+#lightgallery li {
+    flex: 0 0 32%;
+    width: 32%;
+    max-width: 32%;
+    margin: 4px 0;
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#lightgallery li a,
+#lightgallery li img {
+    width: 100%;
+}
+
+
+/*************************** Board Of Directors Style *****************************/
+
+div#directors-container {
+    padding: 4rem 2rem;
+}
+
+div#directors-container>.row {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#directors-container .row .director {
+    width: 30%;
+    overflow: hidden;
+}
+
+#directors-container .row .director:nth-child(even) {
+    width: 30%;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient( to bottom, rgba(0, 0, 0, 0) 25%, #e8e9e8 25%, #e8e9e8 75%, rgba(0, 0, 0, 0) 75%) 0 100%;
+}
+
+#directors-container .row .director:last-child {
+    border-right-width: 1px;
+    border-left-width: 0 !important;
+}
+
+.director .image-container {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.director .image-container img {
+    width: 100%;
+}
+
+.director .director-info {
+    width: 90%;
+    text-align: center;
+    overflow: hidden;
+    margin: 1rem auto 0 auto;
+}
+
+.director .director-info h1 {
+    font-family: CairoBold;
+    font-size: 20px;
+    color: #0075C8;
+}
+
+.director .director-info p {
+    color: #4D4D4C;
+}
+
+.SectorList .block-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.SectorList .block-image img {
+    width: 90%;
+    height: auto;
+    margin: 3%;
+    border-radius: 3px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .15);
+}
+
+
+/***************** News Details Style ********************************/
+
+.full-news h1 {
+    font-size: 20px;
+}
+
+.full-news p {
+    max-height: initial;
+    margin-top: 2rem;
+    font-size: 16px;
+    color: #4D4D4C;
+    display: block;
+    line-height: 40px;
+}
+
+.full-news .news-image {
+    border: 8px solid #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+    display: block;
+    width: fit-content;
+    margin-bottom: .5rem;
+    max-width: 75%;
+    overflow: hidden;
+}
+
+.full-news .news-image img {
+    width: 100%;
+}
+
+.full-news .mews-date {
+    color: #9E9E9E;
+    font-family: CairoSemiBold;
+}
+
+
+/***************** All News Style ********************************/
+
+#all-news-container {
+    padding: 1rem;
+}
+
+#all-news-container .news-details {
+    padding: 1rem 1rem 1rem 3rem;
+}
+
+#all-news-container h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+#all-news-container p {
+    max-height: 96px;
+    overflow: hidden;
+}
+
+#all-news-container .news-image {
+    overflow: hidden;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    border-radius: 0 5px 5px 0;
+}
+
+#all-news-container .news-image img {
+    width: 100%;
+    min-height: 100%;
+}
+
+#all-news-container .mews-date {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #fff;
+    padding: 3px 10px;
+    border-radius: 3px;
+    color: #0075c8;
+    font-weight: bold;
+    font-size: 14px;
+    direction: ltr;
+}
+
+#all-news-container .pagination {
+    padding: 0rem 15px;
+    bottom: 0;
+    border: none;
+}
+
+
+/************************** Sector Style *******************************/
+
+.sector-content .block-content {
+    padding: 2rem;
+}
+
+.sector-content .block-content p,
+.sector-content .block-content div {
+    margin: 0;
+    font-size: 16px;
+    color: #4D4D4C;
+    font-family: CairoSemiBold;
+    display: block;
+    line-height: 32px;
+}
+
+.sector-content .block-content img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.sector-content ul {
+    padding: 1rem 2rem;
+    color: #4D4D4C;
+}
+
+.sector-content ul li {
+    list-style-type: none;
+    margin-bottom: .5rem;
+    line-height: 32px;
+    list-style-position: initial;
+    position: relative;
+}
+
+.sector-content ul li::before {
+    content: url('../Images/Icons/Right_Arrow.png');
+    position: absolute;
+    top: 3px;
+    right: -20px;
+    height: 100%;
+}

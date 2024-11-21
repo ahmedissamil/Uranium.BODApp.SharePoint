@@ -1,0 +1,540 @@
+﻿.fc-calendar-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+.fc-calendar {
+    width: 100%;
+    height: 100%;
+}
+
+.fc-calendar .fc-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    height: -moz-calc(100% - 30px);
+    height: -webkit-calc(100% - 30px);
+    height: calc(100% - 30px);
+    border: 1px solid #ddd;
+}
+
+.fc-calendar .fc-row {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.fc-four-rows .fc-row {
+    height: 25%;
+}
+
+.fc-five-rows .fc-row {
+    height: 20%;
+}
+
+.fc-six-rows .fc-row {
+    height: 16.66%;
+    height: -moz-calc(100%/6);
+    height: -webkit-calc(100%/6);
+    height: calc(100%/6);
+}
+
+.fc-calendar .fc-row>div,
+.fc-calendar .fc-head>div {
+    float: left;
+    height: 100%;
+    width: 14.28%;
+    /* 100% / 7 */
+    width: -moz-calc(100%/7);
+    width: -webkit-calc(100%/7);
+    width: calc(100%/7);
+    position: relative;
+}
+
+
+/* IE 9 is rounding up the calc it seems */
+
+.ie9 .fc-calendar .fc-row>div,
+.ie9 .fc-calendar .fc-head>div {
+    width: 14.2%;
+}
+
+.fc-calendar .fc-head>div {
+    text-align: center;
+}
+
+.fc-calendar .fc-row>div>span.fc-weekday {
+    padding-left: 5px;
+    display: none;
+}
+
+.fc-calendar .fc-row>div.fc-today {
+    background: #fff8bc;
+}
+
+.fc-calendar .fc-row>div.fc-out {
+    opacity: 0.6;
+}
+
+.fc-calendar .fc-row>div:last-child,
+.fc-calendar .fc-head>div:last-child {
+    border-right: none;
+}
+
+.fc-calendar .fc-row:last-child {
+    border-bottom: none;
+}
+
+.main {
+    padding: 30px 20px 100px 20px;
+    max-width: 1580px;
+    margin: 0 auto;
+}
+
+.main>header {
+    padding: 0 10px 30px;
+}
+
+.main>header h1 {
+    font-size: 34px;
+    line-height: 38px;
+    margin: 0;
+    font-weight: 700;
+    color: #333;
+    float: left;
+}
+
+.main>header h1 span {
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.main h2 {
+    font-size: 38px;
+    font-weight: 300;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+    padding: 10px 0 0 0;
+    margin-bottom: 20px;
+    border-top: 1px solid #f7f7f7;
+}
+
+
+/* Header Style */
+
+.codrops-top {
+    line-height: 24px;
+    font-size: 11px;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    z-index: 9999;
+    position: relative;
+    box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.codrops-top a {
+    padding: 0px 10px;
+    letter-spacing: 1px;
+    color: #333;
+    text-shadow: 0 -1px 0 #fff;
+    display: inline-block;
+}
+
+.codrops-top a:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+.codrops-top span.right {
+    float: right;
+}
+
+.codrops-top span.right a {
+    float: left;
+    display: block;
+}
+
+
+/* Demo Buttons Style */
+
+.codrops-demos {
+    float: right;
+    padding-top: 10px;
+}
+
+.codrops-demos a {
+    display: inline-block;
+    margin: 10px;
+    color: #666;
+    font-weight: 700;
+    line-height: 30px;
+    border-bottom: 4px solid transparent;
+}
+
+.codrops-demos a:hover {
+    color: #000;
+    border-color: #000;
+}
+
+.codrops-demos a.current-demo,
+.codrops-demos a.current-demo:hover {
+    color: #aaa;
+    border-color: #aaa;
+}
+
+.support-note span {
+    color: #ac375d;
+    font-size: 16px;
+    display: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.loadmore {
+    padding: 10px;
+    background: #ddd;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 4px;
+    display: none;
+}
+
+.loadmore:hover {
+    background: #333;
+}
+
+.fc-selected {
+    background: #48cfae;
+    color: #fff !important;
+}
+
+.custom-header {
+    padding: 20px 40px;
+    height: 60px;
+    position: relative;
+}
+
+.custom-header h2,
+.custom-header h3 {
+    float: left;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.custom-header h2 {
+    color: #fff;
+    width: 60%;
+}
+
+.custom-header h2 a,
+.custom-header h2 span {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.custom-header h2 a {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.no-touch .custom-header h2 a:hover {
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.custom-header h3 {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    line-height: 30px;
+    text-align: right;
+    font-size: 18px;
+    letter-spacing: 0px;
+    padding-left: 10px;
+}
+
+.custom-header h3 span {
+    margin-right: 8px;
+}
+
+.custom-header nav {
+    position: absolute;
+    right: 45px;
+    top: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.custom-header nav span {
+    float: left;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    color: #21b4eb;
+    cursor: pointer;
+    margin: 0 1px;
+    font-size: 20px;
+}
+
+.custom-header nav span:first-child {
+    border-radius: 3px 0 0 3px;
+}
+
+.custom-header span:before {
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: 900;
+    color: #20b3e9;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    text-indent: 4px;
+    font-size: 16px;
+}
+
+.custom-header nav span.custom-prev:before {
+    content: '\f053';
+}
+
+.custom-header nav span.custom-next:before {
+    content: '\f054';
+}
+
+.custom-header nav span.custom-current:before {
+    content: '\27a6';
+}
+
+.fc-calendar {
+    width: auto;
+    top: 10px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.fc-calendar .fc-head {
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+.fc-calendar .fc-head>div {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.fc-calendar .fc-row>div>span.fc-date {
+    text-shadow: none;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.fc-calendar .fc-body {
+    border: none;
+    padding: 20px;
+}
+
+.fc-calendar .fc-row {
+    border: none;
+}
+
+.fc-calendar .fc-row:last-child {
+    box-shadow: none;
+}
+
+.fc-calendar .fc-row:first-child>div:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+.fc-calendar .fc-row:first-child>div:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+.fc-calendar .fc-row:last-child>div:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+.fc-calendar .fc-row:last-child>div:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+.fc-calendar .fc-row>div {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    cursor: default;
+    font-family: CairoSemiBold;
+    border-right: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.fc-calendar .fc-row:last-child>div {
+    border-bottom: none;
+}
+
+.fc-calendar .fc-row>div:first-child {
+    box-shadow: none;
+}
+
+.fc-calendar .fc-row>div>div {
+    margin-top: 35px;
+}
+
+.fc-calendar .fc-row>div>div span {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 3px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    margin-bottom: 1px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.no-touch .fc-calendar .fc-row>div>div a:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.custom-content-reveal span.custom-content-close {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background: #ef4f69;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    line-height: 13px;
+    padding: 0;
+}
+
+.custom-content-reveal span.custom-content-close:after {
+    content: 'x';
+    font-size: 18px;
+    color: #fff;
+}
+
+.custom-content-reveal b {
+    display: block;
+    color: #48cfae;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.fc-calendar .fc-row>div.fc-content {
+    background: #2196F3;
+    cursor: pointer;
+    color: #fff;
+    transition: all .3s;
+}
+
+.fc-calendar .fc-row>div.fc-content:hover,
+.fc-calendar .fc-row>div.fc-selected {
+    background: #0075c8;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, .3);
+}
+
+@media screen and (max-width: 880px),
+screen and (max-height: 450px) {
+    html,
+    body,
+    .container {
+        height: auto;
+    }
+    .custom-header,
+    .custom-header nav,
+    .custom-calendar-full,
+    .fc-calendar-container,
+    .fc-calendar,
+    .fc-calendar .fc-head,
+    .fc-calendar .fc-row>div>span.fc-date {
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        height: auto;
+        width: auto;
+    }
+    .fc-calendar {
+        margin: 0 20px 20px;
+    }
+    .custom-header h2,
+    .custom-header h3 {
+        float: none;
+        width: auto;
+        text-align: left;
+        padding-right: 100px;
+    }
+    .fc-calendar .fc-row,
+    .ie9 .fc-calendar .fc-row>div,
+    .fc-calendar .fc-row>div {
+        height: auto;
+        width: 100%;
+        border: none;
+    }
+    .fc-calendar .fc-row>div {
+        float: none;
+        min-height: 50px;
+        box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2) !important;
+        border-radius: 0px !important;
+    }
+    .fc-calendar .fc-row>div:empty {
+        min-height: 0;
+        height: 0;
+        box-shadow: none !important;
+        padding: 0;
+    }
+    .fc-calendar .fc-row {
+        box-shadow: none;
+    }
+    .fc-calendar .fc-head {
+        display: none;
+    }
+    .fc-calendar .fc-row>div>div {
+        margin-top: 0px;
+        padding-left: 10px;
+        max-width: 70%;
+        display: inline-block;
+    }
+    .fc-calendar .fc-row>div.fc-today {
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .fc-calendar .fc-row>div.fc-today:after {
+        display: none;
+    }
+    .fc-calendar .fc-row>div>span.fc-date {
+        width: 30px;
+        display: inline-block;
+        text-align: right;
+    }
+    .fc-calendar .fc-row>div>span.fc-weekday {
+        display: inline-block;
+        width: 40px;
+        color: #fff;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+}

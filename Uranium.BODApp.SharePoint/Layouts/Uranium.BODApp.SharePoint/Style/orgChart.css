@@ -1,0 +1,701 @@
+﻿.orgchart {
+  display: inline-block;
+  min-height: 202px;
+  min-width: 202px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+   direction: initial;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    /*cursor: grab;*/
+}
+
+/* node styling */
+.orgchart .node {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 3px;
+  border: 2px dashed transparent;
+  text-align: center;
+  width: 130px;
+}
+
+.orgchart.l2r .node, .orgchart.r2l .node {
+  width: 50px;
+  height: 130px;
+}
+
+.orgchart .node>.hazy {
+  opacity: 0.2;
+}
+
+.orgchart .node>.spinner {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  vertical-align: middle;
+  font-size: 30px;
+  color: rgba(68, 157, 68, 0.8);
+}
+
+.orgchart .node:hover {
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  cursor: default;
+  /* z-index: 20; */
+}
+
+
+
+.orgchart .ghost-node {
+  position: fixed;
+  left: -10000px;
+  top: -10000px;
+}
+
+.orgchart .ghost-node rect {
+  fill: #ffffff;
+  stroke: #bf0000;
+}
+
+.orgchart .node.allowedDrop {
+  border-color: rgba(68, 157, 68, 0.9);
+}
+
+.orgchart .node .title {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: rgba(217, 83, 79, 0.8);
+  color: #fff;
+  border-radius: 4px 4px 0 0; 
+}
+
+.orgchart.b2t .node .title {
+  -ms-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  -ms-transform-origin: center bottom;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.orgchart.l2r .node .title {
+  -ms-transform: rotate(-90deg) translate(-40px, -40px) rotateY(180deg);
+  -webkit-transform: rotate(-90deg) translate(-40px, -40px) rotateY(180deg);
+  transform: rotate(-90deg) translate(-40px, -40px) rotateY(180deg);
+  -ms-transform-origin: bottom center;
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+  width: 120px;
+}
+
+.orgchart.r2l .node .title {
+  -ms-transform: rotate(-90deg) translate(-40px, -40px);
+  -webkit-transform: rotate(-90deg) translate(-40px, -40px);
+  transform: rotate(-90deg) translate(-40px, -40px);
+  -ms-transform-origin: bottom center;
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+  width: 120px;
+}
+
+.orgchart .node .title .symbol {
+  float: left;
+  margin-top: 4px;
+  margin-left: 2px;
+}
+
+.orgchart .node .content {
+  width: 100%;
+  height: 20px;
+  font-size: 11px;
+  line-height: 18px;
+  border: 1px solid rgba(217, 83, 79, 0.8);
+  border-radius: 0 0 4px 4px;
+  text-align: center;
+  background-color: #fff;
+  color: #333;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.orgchart.b2t .node .content {
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -ms-transform-origin: center top;
+  -webkit-transform-origin: center top;
+  transform-origin: center top;
+}
+
+.orgchart.l2r .node .content {
+  -ms-transform: rotate(-90deg) translate(-40px, -40px) rotateY(180deg);
+  -webkit-transform: rotate(-90deg) translate(-40px, -40px) rotateY(180deg);
+  transform: rotate(-90deg) translate(-40px, -40px) rotateY(180deg);
+  -ms-transform-origin: top center;
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  width: 120px;
+}
+
+.orgchart.r2l .node .content {
+  -ms-transform: rotate(-90deg) translate(-40px, -40px);
+  -webkit-transform: rotate(-90deg) translate(-40px, -40px);
+  transform: rotate(-90deg) translate(-40px, -40px);
+  -ms-transform-origin: top center;
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  width: 120px;
+}
+
+.orgchart .node .edge {
+  font-size: 15px;
+  position: absolute;
+  color: rgba(68, 157, 68, 0.5);
+  cursor: default;
+  -o-transition: .2s;
+  transition: .2s;
+  -webkit-transition: .2s;
+}
+
+.orgchart.noncollapsable .node .edge {
+  display: none;
+}
+
+.orgchart .edge:hover {
+  color: #449d44;
+  cursor: pointer;
+}
+
+.orgchart .node .verticalEdge {
+  width: calc(100% - 10px);
+  width: -moz-calc(100% - 10px);
+  left: 5px;
+}
+
+.orgchart .node .topEdge {
+  top: -4px;
+}
+
+.orgchart .node .bottomEdge {
+  bottom: -4px;
+}
+
+.orgchart .node .horizontalEdge {
+  width: 15px;
+  height: calc(100% - 10px);
+  height: -moz-calc(100% - 10px);
+  top: 5px;
+}
+
+.orgchart .node .rightEdge {
+  right: -4px;
+}
+
+.orgchart .node .leftEdge {
+  left: -4px;
+}
+
+.orgchart .node .horizontalEdge::before {
+  position: absolute;
+  top: calc(50% - 7px);
+  top: -moz-calc(50% - 7px);
+}
+
+.orgchart .node .rightEdge::before {
+  right: 3px;
+}
+
+.orgchart .node .leftEdge::before {
+  left: 3px;
+}
+
+.orgchart .node .toggleBtn {
+  position: absolute;
+  left: 5px;
+  bottom: -2px;
+  color: rgba(68, 157, 68, 0.6);
+}
+
+.orgchart .node .toggleBtn:hover {
+  color: rgba(68, 157, 68, 0.8);
+}
+
+.oc-export-btn {
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #fff;
+  background-color: #5cb85c;
+  border: 1px solid transparent;
+  border-color: #4cae4c;
+  border-radius: 4px;
+}
+
+.oc-export-btn:hover,.oc-export-btn:focus,.oc-export-btn:active  {
+  background-color: #449d44;
+  border-color: #347a34;
+}
+
+.orgchart~.mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  text-align: center;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.orgchart~.mask .spinner {
+  position: absolute;
+  top: calc(50% - 54px);
+  left: calc(50% - 54px);
+  color: rgba(255,255,255,0.8);
+  font-size: 108px;
+}
+
+.orgchart .node {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  top: 0;
+  left: 0;
+}
+
+.orgchart .slide-down {
+  opacity: 0;
+  top: 40px;
+}
+
+.orgchart.l2r .node.slide-down, .orgchart.r2l .node.slide-down {
+  top: 130px;
+}
+
+.orgchart .slide-up {
+  opacity: 0;
+  top: -40px;
+}
+
+.orgchart.l2r .node.slide-up, .orgchart.r2l .node.slide-up {
+  top: -130px;
+}
+
+.orgchart .slide-right {
+  opacity: 0;
+  left: 130px;
+}
+
+.orgchart.l2r .node.slide-right, .orgchart.r2l .node.slide-right {
+  left: 40px;
+}
+
+.orgchart .slide-left {
+  opacity: 0;
+  left: -130px;
+}
+
+.orgchart.l2r .node.slide-left, .orgchart.r2l .node.slide-left {
+  left: -40px;
+}
+
+
+
+
+
+/* Custom styles */
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+    color: #333333;
+    font-family: Roboto, sans-serif;
+      margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+}
+
+.orgchart {
+/*     background: rgba(185, 203, 233, 0.2); */
+    background-image: none;
+/*       width: 100%; */
+}
+
+.orgchart ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.orgchart .prime-list > li {
+  margin: auto;
+}
+
+.orgchart .node {
+  position: relative;
+  display: flex;
+  width: 166px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 19px;
+  left: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+.orgchart ul {
+  position: relative;
+  left: -2px;
+}
+
+.orgchart ul:not(.prime-list):before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 1px;
+    width: 100%;
+    height: 2px;
+    background: #0075c8;
+}
+
+.node:not(.no-child):after {
+    content: "";
+    position: absolute;
+    bottom: -23px;
+    left: 14%;
+    width: 2px;
+    height: 21px;
+    background: #0075c8;
+}
+
+.sub-list .node:before {
+    content: "";
+    position: absolute;
+    top: -22px;
+    left: 82px;
+    width: 2px;
+    height: 20px;
+    background: #0075c8;
+}
+
+.orgchart .sub-list li {
+  position: relative;
+}
+
+.orgchart .sub-list li:first-child:before,
+.orgchart .sub-list li:last-child:before {
+      content: "";
+    position: absolute;
+    top: -20px;
+    width: 50%;
+    height: 2px;
+    background: #ffffff;
+}
+
+.orgchart .sub-list li:first-child:before {
+  left: 1px;
+}
+
+.orgchart .sub-list li:last-child:before {
+  right: -3px;
+  display: none;
+}
+
+
+
+.orgchart tr.lines .downLine {
+    background: #b3bec7;
+}
+
+.orgchart tr.lines * {
+    border-color: #b3bec7 !important;
+}
+		.user {
+  text-decoration: none;
+  color: #666;
+  display: inline-block;
+  padding: 20px 10px 10px 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background: #fff;
+  min-width: 144px;
+  border-radius: 5px;
+  box-shadow: inset 0px 6px 2px 1px #e5f1fa !important;
+  border-bottom: 2px solid #e5f1fa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+ .user > div,
+ .user > a {
+  font-size: 12px;
+}
+.user .imgBlock{
+  width: 80px;
+  /* width: 90px !important; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* text-align: center; */
+  margin: auto;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+ .user img {
+  margin: 0 auto;
+  width: 100%;
+  height: initial;
+}
+ .user .name {
+  font-size: 16px;
+  margin: 10px 0 0;
+  font-weight: 300;
+  color: #0075c8 !important;
+}
+ .user .role {
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: -1px;
+  color: #4d4d4c !important;
+  font-size: 14px;
+}
+ .user .manager {
+  font-size: 12px;
+  color: #b21e04;
+}
+		
+		.wrap { padding: 15px; }
+h1 { font-size: 28px; }
+h4,
+modal-title { font-size: 18px; font-weight: bold; }
+
+.no-borders { border: 0px; }
+.body-message {font-size: 18px;max-height: 100%;position: relative;}
+.centered { text-align: center; }
+.btn-primary { background-color: #2086c1; border-color: transparent; outline: none; border-radius: 8px; font-size: 15px; padding: 10px 25px; }
+.btn-primary:hover { background-color: #2086c1; border-color: transparent; }
+.btn-primary:focus { outline: none; }
+
+.modal-header {
+    border-bottom: none;
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+.modal-header .close:hover {
+    z-index: 9999999 !important;
+}
+
+.modal-footer {
+    border: none;
+    text-align: left;
+}
+		.modal-body img {
+    /* float: right; */
+    /* border-radius: 50%; */
+    box-shadow: 0px 2px 2px 1px #0000002b;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-body {
+    text-align: right;
+    display: flex;
+    /* flex-direction: row; */
+    /* align-items: flex-start; */
+    padding: 0 !important;
+    overflow-x: auto;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.modal-body .row>div {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: center; */
+    /* justify-content: flex-end; */
+    /* width: fit-content; */
+}
+.modal-body .name {
+    font-size: 25px;
+    color: #005B98;
+    font-weight: 400;
+}
+
+.modal-body .title {
+    font-size: 16px;
+    /* padding-top: 6px; */
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.modal-body .header {
+    text-align: center;
+    padding-right: 13px;
+    text-align: right;
+    padding: 0;
+    word-spacing: initial;
+}
+
+.modal-body .modalContent {
+    /* padding: 20px 50px 20px 30px; */
+    color: #616161;
+    width: 597px;
+    overflow: auto;
+    text-align: right;
+    height: 100%;
+    margin: 0;
+    padding: 10px 50px 20px 50px;
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    word-spacing: 1px;
+}
+
+.modal-content {
+    /* padding-left: 10px; */
+    width: fit-content;
+}
+.body-message .row {/* display: flex; *//* flex-direction: row; *//* align-items: flex-start; *//* justify-content: center; */direction: rtl;margin: 0;position: relative;height: 100%;}
+
+.modal-header button{
+  position:absolute;
+  right: 2%;
+  min-width: 22px;
+  /* padding: 10px !important; */
+  font-size: 44px;
+  top: 3.5%;
+  font-weight: 500;
+  z-index:9999;
+}
+.modal-header button:focus {
+    outline: none;
+}
+.modal.fade.bs-example-modal-new.show.in {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body .row>div:first-child {
+    /* overflow: scroll; */
+    max-height: 100%;
+    position: relative;
+}
+
+.modal-body .row>div:nth-child(2) {
+    width: 286px;
+}
+ul.sub-list.no-before:before {
+    content: none;
+}
+ul.sub-list {}.orgchart .sub-list>li ul {
+    flex-direction: column;
+    /* background: red; */
+    left: 20%;
+}
+
+.orgchart .sub-list>li ul:before {
+    height: calc(104% - 18%) !important;
+}
+
+.orgchart .sub-list>li .no-child {margin-bottom: 1.2rem;}
+.orgchart ul ul ul:not(.HorizontalList):not(.prime-list):before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -5%;
+    right: auto;
+    width: 2px;
+    height: calc(90% - 72px);
+    background: #0075c8;
+}
+
+.orgchart ul.no-before:before {
+    height: calc(100% - 42px) !important;
+}
+ul ul ul.sub-list:not(.HorizontalList) .node:before {
+    content: "";
+    position: absolute;
+    top: auto;
+    bottom: 34px;
+    left: -20px;
+    right: auto;
+    width: 11px;
+    height: 2px;
+    background: #0075c8;
+    transform: rotate(
+180deg
+);
+    transform-origin: right center;
+}
+.orgchart ul ul ul:not(.HorizontalList):not(.prime-list) li .node{
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    justify-content: flex-end;
+    margin-bottom: 0.8rem;
+    margin-right: 0;
+    }
+.orgchart ul ul:not(.HorizontalList):not(.prime-list) li .node{
+    
+}
+.prime-list>li>.node:not(.no-child):after{
+    left: 49%;
+}
+.prime-list>li>.node{
+    margin-bottom:4%
+}

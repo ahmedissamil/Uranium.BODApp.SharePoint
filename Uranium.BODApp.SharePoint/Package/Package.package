@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="3f369082-b61c-4ca5-98ad-3c327d304629" solutionId="3f369082-b61c-4ca5-98ad-3c327d304629" resetWebServer="false" sharePointProductVersion="19.0" name="Uranium.BODApp.SharePoint" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <customAssembly location="CamlBuilder.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\packages\CamlBuilder.1.1.5\lib\net451\CamlBuilder.dll" />
+    <customAssembly location="Newtonsoft.Json.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll" />
+    <customAssembly location="Microsoft.SharePoint.WorkflowServicesBase.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\packages\Microsoft.SharePoint.WorkflowServicesBase.15.0.4695.1000\lib\Microsoft.SharePoint.WorkflowServicesBase.dll" />
+    <customAssembly location="NReco.PdfGenerator.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\packages\NReco.PdfGenerator.1.2.1\lib\net45\NReco.PdfGenerator.dll" />
+  </assemblies>
+  <projectItems>
+    <projectItemReference itemId="4380d002-1b2e-4617-9ffb-a1d48f519467" />
+  </projectItems>
+</package>
